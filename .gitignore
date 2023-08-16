@@ -1,0 +1,12 @@
+node_modules
+*.pack
+.angular
+CHANGELOG.md
+README.md
+dist
+dist-compressed
+.idea
+.browserslistrc
+*.iml
+yarn.lock
+.env
