@@ -9,6 +9,12 @@ export class Test1Component implements OnInit {
   constructor() {}
   bookingDate: any;
   serviceTransaction: any;
+  rq: any = {
+    mc_id: 'luxcity',
+    tran_id: '5fa28561c4624e64a326',
+    refund_amount: '77.87',
+  };
+
   ngOnInit() {
     console.log(this.round(3.171, 2));
     this.bookingDate = [
@@ -81,7 +87,6 @@ export class Test1Component implements OnInit {
         transId: 1218,
       },
     ];
-    this.cal();
   }
 
   round(num: number, fixed: number) {
