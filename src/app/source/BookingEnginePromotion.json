@@ -1,0 +1,1429 @@
+{
+    "filter": {
+        "hotelId": 5,
+        "checkIn": "2024-06-20",
+        "checkOut": "2024-06-21",
+        "roomBooked": 1,
+        "adult": 2,
+        "children": 0,
+        "nights": 1
+    },
+    "filteredMinimumAvailabilities": [
+        {
+            "date": "2024-06-20",
+            "roomTypeId": 25,
+            "roomTypeName": "Duplex Suite",
+            "room": 2,
+            "adult": 2,
+            "children": 1,
+            "baby": 0,
+            "netSize": null,
+            "description": "123",
+            "view": "",
+            "prices": [
+                {
+                    "id": 371,
+                    "name": "Booking.com Price",
+                    "priceTotal": 103,
+                    "priceDeal": 103,
+                    "qty": 0,
+                    "description": "booking always",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 371,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 90,
+                            "totalPrice": 103,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 380,
+                    "name": "RYAN-PRICE-TEST-1",
+                    "priceTotal": 300,
+                    "priceDeal": 300,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 380,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 300,
+                            "totalPrice": 300,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-17 00:00:00",
+                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-19 09:57:05",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-19 09:57:05",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 381,
+                    "name": "RYAN-PRICE-TEST-2",
+                    "priceTotal": 100,
+                    "priceDeal": 100,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 381,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 396,
+                    "name": "RYAN-AIRBNB-TEST-3",
+                    "priceTotal": 130,
+                    "priceDeal": 130,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 396,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 93.5,
+                            "totalPrice": 130,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                }
+            ],
+            "property": [
+                {
+                    "id": 12,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 14,
+                    "propName": "Smoking"
+                },
+                {
+                    "id": 13,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 11,
+                    "propName": "NON-SMOKING ROOM"
+                },
+                {
+                    "id": 14,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 10,
+                    "propName": "NEAR ELEVATION"
+                },
+                {
+                    "id": 34,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 23,
+                    "propName": "Rooftop pool"
+                },
+                {
+                    "id": 35,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 12,
+                    "propName": "QUIET ROOM"
+                },
+                {
+                    "id": 36,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 25,
+                    "propName": "Sea view"
+                },
+                {
+                    "id": 37,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 18,
+                    "propName": "City view"
+                },
+                {
+                    "id": 38,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 17,
+                    "propName": "Air conditioning"
+                },
+                {
+                    "id": 39,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 19,
+                    "propName": "Flat-screen TV"
+                },
+                {
+                    "id": 40,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 13,
+                    "propName": "Non-smoking"
+                },
+                {
+                    "id": 41,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 21,
+                    "propName": "Spa bath"
+                },
+                {
+                    "id": 42,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 20,
+                    "propName": "Minibar"
+                },
+                {
+                    "id": 43,
+                    "type": "ROOM_TYPE",
+                    "refId": 25,
+                    "propId": 15,
+                    "propName": "Balcony"
+                }
+            ],
+            "images": [
+                {
+                    "id": 47,
+                    "src": "/api/engine/image/room_type/5/25/47"
+                },
+                {
+                    "id": 48,
+                    "src": "/api/engine/image/room_type/5/25/48"
+                },
+                {
+                    "id": 154,
+                    "src": "/api/engine/image/room_type/5/25/154"
+                },
+                {
+                    "id": 155,
+                    "src": "/api/engine/image/room_type/5/25/155"
+                },
+                {
+                    "id": 156,
+                    "src": "/api/engine/image/room_type/5/25/156"
+                },
+                {
+                    "id": 157,
+                    "src": "/api/engine/image/room_type/5/25/157"
+                },
+                {
+                    "id": 158,
+                    "src": "/api/engine/image/room_type/5/25/158"
+                },
+                {
+                    "id": 159,
+                    "src": "/api/engine/image/room_type/5/25/159"
+                },
+                {
+                    "id": 160,
+                    "src": "/api/engine/image/room_type/5/25/160"
+                },
+                {
+                    "id": 161,
+                    "src": "/api/engine/image/room_type/5/25/161"
+                },
+                {
+                    "id": 162,
+                    "src": "/api/engine/image/room_type/5/25/162"
+                },
+                {
+                    "id": 163,
+                    "src": "/api/engine/image/room_type/5/25/163"
+                }
+            ]
+        },
+        {
+            "date": "2024-06-20",
+            "roomTypeId": 26,
+            "roomTypeName": "Studio Queen",
+            "room": 10,
+            "adult": 3,
+            "children": 1,
+            "baby": 0,
+            "netSize": "53.000",
+            "description": "The light and airy Studio Queen offer a choice of either a king-size bed or twin beds, ideal for all types of travelers who enjoy a spacious and comfortable room. The Studio Queen average 50 square meters (538 square feet)",
+            "view": "",
+            "prices": [
+                {
+                    "id": 371,
+                    "name": "Booking.com Price",
+                    "priceTotal": 105,
+                    "priceDeal": 105,
+                    "qty": 0,
+                    "description": "booking always",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 371,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 92,
+                            "totalPrice": 105,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 380,
+                    "name": "RYAN-PRICE-TEST-1",
+                    "priceTotal": 240,
+                    "priceDeal": 240,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 380,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-17 00:00:00",
+                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-19 09:57:05",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-19 09:57:05",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 381,
+                    "name": "RYAN-PRICE-TEST-2",
+                    "priceTotal": 100,
+                    "priceDeal": 100,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 381,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 396,
+                    "name": "RYAN-AIRBNB-TEST-3",
+                    "priceTotal": 150,
+                    "priceDeal": 150,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 396,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 113.5,
+                            "totalPrice": 150,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 433,
+                    "name": "BE same price (1R)",
+                    "priceTotal": 50,
+                    "priceDeal": 50,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 433,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 43.5,
+                            "totalPrice": 50,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                }
+            ],
+            "property": [
+                {
+                    "id": 5,
+                    "type": "ROOM_TYPE",
+                    "refId": 26,
+                    "propId": 13,
+                    "propName": "Non-smoking"
+                },
+                {
+                    "id": 54,
+                    "type": "ROOM_TYPE",
+                    "refId": 26,
+                    "propId": 17,
+                    "propName": "Air conditioning"
+                },
+                {
+                    "id": 55,
+                    "type": "ROOM_TYPE",
+                    "refId": 26,
+                    "propId": 19,
+                    "propName": "Flat-screen TV"
+                },
+                {
+                    "id": 56,
+                    "type": "ROOM_TYPE",
+                    "refId": 26,
+                    "propId": 15,
+                    "propName": "Balcony"
+                },
+                {
+                    "id": 57,
+                    "type": "ROOM_TYPE",
+                    "refId": 26,
+                    "propId": 16,
+                    "propName": "Private Bathroom"
+                },
+                {
+                    "id": 58,
+                    "type": "ROOM_TYPE",
+                    "refId": 26,
+                    "propId": 21,
+                    "propName": "Spa bath"
+                },
+                {
+                    "id": 59,
+                    "type": "ROOM_TYPE",
+                    "refId": 26,
+                    "propId": 18,
+                    "propName": "City view"
+                }
+            ],
+            "images": [
+                {
+                    "id": 60,
+                    "src": "/api/engine/image/room_type/5/26/60"
+                },
+                {
+                    "id": 62,
+                    "src": "/api/engine/image/room_type/5/26/62"
+                },
+                {
+                    "id": 63,
+                    "src": "/api/engine/image/room_type/5/26/63"
+                },
+                {
+                    "id": 184,
+                    "src": "/api/engine/image/room_type/5/26/184"
+                },
+                {
+                    "id": 185,
+                    "src": "/api/engine/image/room_type/5/26/185"
+                },
+                {
+                    "id": 186,
+                    "src": "/api/engine/image/room_type/5/26/186"
+                },
+                {
+                    "id": 187,
+                    "src": "/api/engine/image/room_type/5/26/187"
+                },
+                {
+                    "id": 188,
+                    "src": "/api/engine/image/room_type/5/26/188"
+                },
+                {
+                    "id": 189,
+                    "src": "/api/engine/image/room_type/5/26/189"
+                },
+                {
+                    "id": 190,
+                    "src": "/api/engine/image/room_type/5/26/190"
+                },
+                {
+                    "id": 191,
+                    "src": "/api/engine/image/room_type/5/26/191"
+                },
+                {
+                    "id": 192,
+                    "src": "/api/engine/image/room_type/5/26/192"
+                },
+                {
+                    "id": 193,
+                    "src": "/api/engine/image/room_type/5/26/193"
+                }
+            ]
+        },
+        {
+            "date": "2024-06-20",
+            "roomTypeId": 28,
+            "roomTypeName": "Sky Villa",
+            "room": 1,
+            "adult": 2,
+            "children": 1,
+            "baby": 0,
+            "netSize": null,
+            "description": null,
+            "view": "",
+            "prices": [
+                {
+                    "id": 371,
+                    "name": "Booking.com Price",
+                    "priceTotal": 107,
+                    "priceDeal": 107,
+                    "qty": 0,
+                    "description": "booking always",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 371,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 94,
+                            "totalPrice": 107,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 380,
+                    "name": "RYAN-PRICE-TEST-1",
+                    "priceTotal": 240,
+                    "priceDeal": 240,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 380,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-17 00:00:00",
+                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-19 09:57:05",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-19 09:57:05",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 381,
+                    "name": "RYAN-PRICE-TEST-2",
+                    "priceTotal": 100,
+                    "priceDeal": 100,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 381,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 396,
+                    "name": "RYAN-AIRBNB-TEST-3",
+                    "priceTotal": 170,
+                    "priceDeal": 170,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 396,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 133.5,
+                            "totalPrice": 170,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 435,
+                    "name": "BE different price (1R)",
+                    "priceTotal": 120,
+                    "priceDeal": 120,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 435,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 113.5,
+                            "totalPrice": 120,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                }
+            ],
+            "property": [
+                {
+                    "id": 15,
+                    "type": "ROOM_TYPE",
+                    "refId": 28,
+                    "propId": 10,
+                    "propName": "NEAR ELEVATION"
+                },
+                {
+                    "id": 16,
+                    "type": "ROOM_TYPE",
+                    "refId": 28,
+                    "propId": 11,
+                    "propName": "NON-SMOKING ROOM"
+                }
+            ],
+            "images": [
+                {
+                    "id": 56,
+                    "src": "/api/engine/image/room_type/5/28/56"
+                },
+                {
+                    "id": 59,
+                    "src": "/api/engine/image/room_type/5/28/59"
+                },
+                {
+                    "id": 174,
+                    "src": "/api/engine/image/room_type/5/28/174"
+                },
+                {
+                    "id": 175,
+                    "src": "/api/engine/image/room_type/5/28/175"
+                },
+                {
+                    "id": 176,
+                    "src": "/api/engine/image/room_type/5/28/176"
+                },
+                {
+                    "id": 177,
+                    "src": "/api/engine/image/room_type/5/28/177"
+                },
+                {
+                    "id": 178,
+                    "src": "/api/engine/image/room_type/5/28/178"
+                },
+                {
+                    "id": 179,
+                    "src": "/api/engine/image/room_type/5/28/179"
+                },
+                {
+                    "id": 180,
+                    "src": "/api/engine/image/room_type/5/28/180"
+                },
+                {
+                    "id": 181,
+                    "src": "/api/engine/image/room_type/5/28/181"
+                },
+                {
+                    "id": 182,
+                    "src": "/api/engine/image/room_type/5/28/182"
+                },
+                {
+                    "id": 183,
+                    "src": "/api/engine/image/room_type/5/28/183"
+                }
+            ]
+        },
+        {
+            "date": "2024-06-20",
+            "roomTypeId": 29,
+            "roomTypeName": "Studio Twin",
+            "room": 3,
+            "adult": 2,
+            "children": 0,
+            "baby": 0,
+            "netSize": null,
+            "description": null,
+            "view": "",
+            "prices": [
+                {
+                    "id": 371,
+                    "name": "Booking.com Price",
+                    "priceTotal": 106,
+                    "priceDeal": 106,
+                    "qty": 0,
+                    "description": "booking always",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 371,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 93,
+                            "totalPrice": 106,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 380,
+                    "name": "RYAN-PRICE-TEST-1",
+                    "priceTotal": 240,
+                    "priceDeal": 240,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 380,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-17 00:00:00",
+                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-19 09:57:05",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-19 09:57:05",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 381,
+                    "name": "RYAN-PRICE-TEST-2",
+                    "priceTotal": 100,
+                    "priceDeal": 100,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 381,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 396,
+                    "name": "RYAN-AIRBNB-TEST-3",
+                    "priceTotal": 160,
+                    "priceDeal": 160,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 396,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 123.5,
+                            "totalPrice": 160,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 434,
+                    "name": "BE same price (2R)",
+                    "priceTotal": 80,
+                    "priceDeal": 80,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 434,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 73.5,
+                            "totalPrice": 80,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                }
+            ],
+            "property": [
+                {
+                    "id": 60,
+                    "type": "ROOM_TYPE",
+                    "refId": 29,
+                    "propId": 22,
+                    "propName": "Mountain view"
+                },
+                {
+                    "id": 61,
+                    "type": "ROOM_TYPE",
+                    "refId": 29,
+                    "propId": 17,
+                    "propName": "Air conditioning"
+                },
+                {
+                    "id": 62,
+                    "type": "ROOM_TYPE",
+                    "refId": 29,
+                    "propId": 19,
+                    "propName": "Flat-screen TV"
+                },
+                {
+                    "id": 63,
+                    "type": "ROOM_TYPE",
+                    "refId": 29,
+                    "propId": 18,
+                    "propName": "City view"
+                }
+            ],
+            "images": [
+                {
+                    "id": 64,
+                    "src": "/api/engine/image/room_type/5/29/64"
+                },
+                {
+                    "id": 66,
+                    "src": "/api/engine/image/room_type/5/29/66"
+                },
+                {
+                    "id": 69,
+                    "src": "/api/engine/image/room_type/5/29/69"
+                },
+                {
+                    "id": 194,
+                    "src": "/api/engine/image/room_type/5/29/194"
+                },
+                {
+                    "id": 195,
+                    "src": "/api/engine/image/room_type/5/29/195"
+                },
+                {
+                    "id": 196,
+                    "src": "/api/engine/image/room_type/5/29/196"
+                },
+                {
+                    "id": 197,
+                    "src": "/api/engine/image/room_type/5/29/197"
+                },
+                {
+                    "id": 198,
+                    "src": "/api/engine/image/room_type/5/29/198"
+                },
+                {
+                    "id": 199,
+                    "src": "/api/engine/image/room_type/5/29/199"
+                },
+                {
+                    "id": 200,
+                    "src": "/api/engine/image/room_type/5/29/200"
+                },
+                {
+                    "id": 201,
+                    "src": "/api/engine/image/room_type/5/29/201"
+                },
+                {
+                    "id": 202,
+                    "src": "/api/engine/image/room_type/5/29/202"
+                },
+                {
+                    "id": 203,
+                    "src": "/api/engine/image/room_type/5/29/203"
+                }
+            ]
+        },
+        {
+            "date": "2024-06-20",
+            "roomTypeId": 30,
+            "roomTypeName": "Deluxe Classic",
+            "room": 10,
+            "adult": 2,
+            "children": 1,
+            "baby": 0,
+            "netSize": "41.130",
+            "description": "Deluxe Classic Description",
+            "view": "",
+            "prices": [
+                {
+                    "id": 371,
+                    "name": "Booking.com Price",
+                    "priceTotal": 101,
+                    "priceDeal": 101,
+                    "qty": 0,
+                    "description": "booking always",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 371,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 88,
+                            "totalPrice": 101,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 380,
+                    "name": "RYAN-PRICE-TEST-1",
+                    "priceTotal": 200,
+                    "priceDeal": 200,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 380,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 200,
+                            "totalPrice": 200,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-17 00:00:00",
+                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-19 09:57:05",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-19 09:57:05",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 381,
+                    "name": "RYAN-PRICE-TEST-2",
+                    "priceTotal": 100,
+                    "priceDeal": 100,
+                    "qty": 0,
+                    "description": "do not touch",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 381,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 396,
+                    "name": "RYAN-AIRBNB-TEST-3",
+                    "priceTotal": 110,
+                    "priceDeal": 110,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 396,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 73.5,
+                            "totalPrice": 110,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                },
+                {
+                    "id": 436,
+                    "name": "BE different price (2R)",
+                    "priceTotal": 90,
+                    "priceDeal": 90,
+                    "qty": 0,
+                    "description": "",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-20",
+                            "priceId": 436,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 83.5,
+                            "totalPrice": 90,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0
+                        }
+                    ]
+                }
+            ],
+            "property": [
+                {
+                    "id": 6,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 9,
+                    "propName": "FAR ELEVATION"
+                },
+                {
+                    "id": 7,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 12,
+                    "propName": "QUIET ROOM"
+                },
+                {
+                    "id": 8,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 13,
+                    "propName": "Non-smoking"
+                },
+                {
+                    "id": 24,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 17,
+                    "propName": "Air conditioning"
+                },
+                {
+                    "id": 25,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 18,
+                    "propName": "City view"
+                },
+                {
+                    "id": 26,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 15,
+                    "propName": "Balcony"
+                },
+                {
+                    "id": 27,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 16,
+                    "propName": "Private Bathroom"
+                },
+                {
+                    "id": 28,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 14,
+                    "propName": "Smoking"
+                },
+                {
+                    "id": 29,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 25,
+                    "propName": "Sea view"
+                },
+                {
+                    "id": 30,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 19,
+                    "propName": "Flat-screen TV"
+                },
+                {
+                    "id": 31,
+                    "type": "ROOM_TYPE",
+                    "refId": 30,
+                    "propId": 20,
+                    "propName": "Minibar"
+                }
+            ],
+            "images": [
+                {
+                    "id": 101,
+                    "src": "/api/engine/image/room_type/5/30/101"
+                },
+                {
+                    "id": 134,
+                    "src": "/api/engine/image/room_type/5/30/134"
+                },
+                {
+                    "id": 135,
+                    "src": "/api/engine/image/room_type/5/30/135"
+                },
+                {
+                    "id": 136,
+                    "src": "/api/engine/image/room_type/5/30/136"
+                },
+                {
+                    "id": 137,
+                    "src": "/api/engine/image/room_type/5/30/137"
+                },
+                {
+                    "id": 138,
+                    "src": "/api/engine/image/room_type/5/30/138"
+                },
+                {
+                    "id": 139,
+                    "src": "/api/engine/image/room_type/5/30/139"
+                },
+                {
+                    "id": 140,
+                    "src": "/api/engine/image/room_type/5/30/140"
+                },
+                {
+                    "id": 141,
+                    "src": "/api/engine/image/room_type/5/30/141"
+                },
+                {
+                    "id": 142,
+                    "src": "/api/engine/image/room_type/5/30/142"
+                },
+                {
+                    "id": 143,
+                    "src": "/api/engine/image/room_type/5/30/143"
+                }
+            ]
+        }
+    ]
+}
