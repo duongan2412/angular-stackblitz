@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-test1',
@@ -6,109 +7,103 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test1.component.css'],
 })
 export class Test1Component implements OnInit {
-  constructor() {}
-  bookingDate: any;
-  serviceTransaction: any;
-  rq: any = {
-    mc_id: 'luxcity',
-    tran_id: '5fa28561c4624e64a326',
-    refund_amount: '77.87',
-  };
+  constructor() { }
+  filter: any
+  promotions: any;
 
   ngOnInit() {
-    console.log(this.round(3.171, 2));
-    this.bookingDate = [
+    this.promotions = [
       {
-        confirmNumber: '23A00672',
-        bookingCode: '23B00767',
-        room: '104',
-        guestName: 'Shiba',
-        arrival: '2023-09-08 09:48:30',
-        departure: '2023-10-08 11:00:00',
-        company: 'Agoda 2',
-        amount: 0,
-        originAmount: '45.00',
-        notice: '',
-        cashier: null,
-        paymentMethod: 'Receivables',
-        customers: 'Shiba',
-        hasServiceCharge: 1,
-        hasAct: 1,
-        createdAt: '2023-09-08',
-        checkNumCode: '',
-        date: '2023-09-08',
-        type: 'RTT',
-        refId: 1218,
-        transId: 1218,
-      },
-      {
-        confirmNumber: '23A00672',
-        bookingCode: '23B00767',
-        room: '104',
-        guestName: 'Shiba',
-        arrival: '2023-09-08 09:48:30',
-        departure: '2023-10-08 11:00:00',
-        company: 'Agoda 2',
-        amount: 0,
-        originAmount: '45.00',
-        notice: '',
-        cashier: null,
-        paymentMethod: 'Receivables',
-        customers: 'Shiba',
-        hasServiceCharge: 1,
-        hasAct: 1,
-        createdAt: '2023-09-09',
-        checkNumCode: '',
-        date: '2023-09-09',
-        type: 'RTT',
-        refId: 1218,
-        transId: 1218,
-      },
-    ];
-    this.serviceTransaction = [
-      {
-        confirmNumber: '23A00672',
-        bookingCode: '23B00767',
-        room: '104',
-        guestName: 'Shiba',
-        arrival: '2023-09-08 09:48:30',
-        departure: '2023-10-08 11:00:00',
-        company: 'Agoda 2',
-        amount: 0,
-        originAmount: '230.00',
-        notice: '',
-        cashier: null,
-        paymentMethod: 'Receivables',
-        createdAt: '2023-09-08 09:57:48',
-        checkNumCode: '',
-        date: '2023-09-08',
-        type: 'STT',
-        refId: 1218,
-        transId: 1218,
-      },
-    ];
-  }
-
-  round(num: number, fixed: number) {
-    fixed = fixed || 0;
-    fixed = Math.pow(10, fixed);
-    return Math.floor(num * fixed) / fixed;
-  }
-
-  cal() {
-    const groupedResult: { [key: string]: any } = {};
-    [...this.bookingDate, ...this.serviceTransaction].forEach((x: any) => {
-      const { confirmNumber, date, originAmount } = x;
-      const value = Number(originAmount);
-      const key = `${confirmNumber}_${date}`;
-
-      if (groupedResult.hasOwnProperty(key)) {
-        groupedResult[key].originAmount += Number(value);
-      } else {
-        groupedResult[key] = { ...x, originAmount: value };
+        "id": 1,
+        "code": "RP001",
+        "name": "RP001",
+        "hotelId": 5,
+        "promotionTypeId": 1,
+        "applyTimeBookingDateType": "ALWAYS",
+        "bookingDateFrom": null,
+        "bookingDateTo": null,
+        "applyTimeStayingDateType": "PERIOD",
+        "stayingDateFrom": "2024-06-17 00:00:00",
+        "stayingDateTo": "2024-06-17 00:00:00",
+        "canRefund": false,
+        "refundDay": "1101111",
+        "refundAt": "CHECKIN_DATE",
+        "description": "",
+        "createdAt": "2024-06-17 09:07:45",
+        "updatedAt": "2024-06-19 08:42:42",
+        "createdBy": 96,
+        "updatedBy": 96,
+        "deletedAt": null,
+        "deletedBy": null,
+        "status": "ACTIVE",
+        "promotionConditionId": 1,
+        "promotionCondition": {
+          "id": 1,
+          "bookingEnginePromotionTypeId": 1,
+          "applyAdjustmentType": "DISCOUNT",
+          "rate": 0,
+          "unit": "PERCENT",
+          "minQuantityApply": 1,
+          "freeQuantity": 1,
+          "applyFor": "NIGHTS",
+          "createdAt": "2024-06-17 09:07:45",
+          "updatedAt": "2024-06-19 08:42:42",
+          "createdBy": 96,
+          "updatedBy": 96
+        },
+        "blackoutDateBookedDate": [
+          {
+            "id": 28,
+            "refId": 1,
+            "blackoutDateType": "BOOKING_DATE",
+            "from": "2024-06-17 00:00:00",
+            "to": "2024-06-17 00:00:00"
+          }
+        ],
+        "blackoutDateStayingDate": [
+          {
+            "id": 29,
+            "refId": 1,
+            "blackoutDateType": "STAYING_DATE",
+            "from": "2024-06-17 00:00:00",
+            "to": "2024-06-17 00:00:00"
+          }
+        ]
       }
-    });
-    const resultCityLedger: any[] = Object.values(groupedResult);
-    console.log(resultCityLedger);
+    ]
+    this.checkStaying();
+  }
+
+  checkStaying() {
+    this.filter = {
+      "hotelId": 5,
+      "checkIn": "2024-06-20",
+      "checkOut": "2024-06-21",
+      "roomBooked": 1,
+      "adult": 2,
+      "children": 0,
+      "nights": 1
+    };
+
+    const diff = moment(this.filter.checkOut).diff(moment(this.filter.checkIn), 'days');
+    console.log({ diff });
+    let isAllStayingDateNotApply: boolean = true;
+    for (let i = 0; i < diff; i++) {
+      const start = this.filter.checkIn;
+      isAllStayingDateNotApply = this.isDateInRange(start,)
+
+
+    }
+  }
+
+  isDateInRange(date: string, from?: string, to?: string): boolean {
+    const targetDate = new Date(date);
+    if (from && targetDate < new Date(from)) {
+      return false;
+    }
+    if (to && targetDate > new Date(to)) {
+      return false;
+    }
+    return true;
   }
 }

@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "code": "RP001",
+        "name": "RP001",
+        "hotelId": 5,
+        "promotionTypeId": 1,
+        "applyTimeBookingDateType": "ALWAYS",
+        "bookingDateFrom": null,
+        "bookingDateTo": null,
+        "applyTimeStayingDateType": "PERIOD",
+        "stayingDateFrom": "2024-06-17 00:00:00",
+        "stayingDateTo": "2024-06-17 00:00:00",
+        "canRefund": false,
+        "refundDay": "1101111",
+        "refundAt": "CHECKIN_DATE",
+        "description": "",
+        "createdAt": "2024-06-17 09:07:45",
+        "updatedAt": "2024-06-19 08:42:42",
+        "createdBy": 96,
+        "updatedBy": 96,
+        "deletedAt": null,
+        "deletedBy": null,
+        "status": "ACTIVE",
+        "promotionConditionId": 1,
+        "promotionCondition": {
+            "id": 1,
+            "bookingEnginePromotionTypeId": 1,
+            "applyAdjustmentType": "DISCOUNT",
+            "rate": 0,
+            "unit": "PERCENT",
+            "minQuantityApply": 1,
+            "freeQuantity": 1,
+            "applyFor": "NIGHTS",
+            "createdAt": "2024-06-17 09:07:45",
+            "updatedAt": "2024-06-19 08:42:42",
+            "createdBy": 96,
+            "updatedBy": 96
+        },
+        "blackoutDateBookedDate": [
+            {
+                "id": 28,
+                "refId": 1,
+                "blackoutDateType": "BOOKING_DATE",
+                "from": "2024-06-17 00:00:00",
+                "to": "2024-06-17 00:00:00"
+            }
+        ],
+        "blackoutDateStayingDate": [
+            {
+                "id": 29,
+                "refId": 1,
+                "blackoutDateType": "STAYING_DATE",
+                "from": "2024-06-17 00:00:00",
+                "to": "2024-06-17 00:00:00"
+            }
+        ]
+    }
+]
