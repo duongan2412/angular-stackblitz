@@ -1,16 +1,16 @@
 {
     "filter": {
         "hotelId": 5,
-        "checkIn": "2024-06-20",
-        "checkOut": "2024-06-21",
+        "checkIn": "2024-06-22",
+        "checkOut": "2024-06-25",
         "roomBooked": 1,
         "adult": 2,
         "children": 0,
-        "nights": 1
+        "nights": 3
     },
     "filteredMinimumAvailabilities": [
         {
-            "date": "2024-06-20",
+            "date": "2024-06-22",
             "roomTypeId": 25,
             "roomTypeName": "Duplex Suite",
             "room": 2,
@@ -24,13 +24,13 @@
                 {
                     "id": 371,
                     "name": "Booking.com Price",
-                    "priceTotal": 103,
-                    "priceDeal": 103,
+                    "priceTotal": 309,
+                    "priceDeal": 309,
                     "qty": 0,
                     "description": "booking always",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 371,
                             "roomTypeId": 25,
                             "isOpenPrice": true,
@@ -39,20 +39,51 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 371,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 90,
+                            "totalPrice": 103,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 371,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 90,
+                            "totalPrice": 103,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
-                    ]
+                    ],
+                    "promotions": []
                 },
                 {
                     "id": 380,
                     "name": "RYAN-PRICE-TEST-1",
-                    "priceTotal": 300,
-                    "priceDeal": 300,
+                    "priceTotal": 650,
+                    "priceDeal": 650,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 380,
                             "roomTypeId": 25,
                             "isOpenPrice": true,
@@ -61,7 +92,37 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 380,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 50,
+                            "totalPrice": 50,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 380,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 300,
+                            "totalPrice": 300,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
                     ],
                     "promotions": [
@@ -75,14 +136,14 @@
                             "bookingDateFrom": null,
                             "bookingDateTo": null,
                             "applyTimeStayingDateType": "PERIOD",
-                            "stayingDateFrom": "2024-06-17 00:00:00",
-                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
                             "canRefund": false,
                             "refundDay": "1101111",
                             "refundAt": "CHECKIN_DATE",
                             "description": "",
                             "createdAt": "2024-06-17 09:07:45",
-                            "updatedAt": "2024-06-19 09:57:05",
+                            "updatedAt": "2024-06-22 10:33:46",
                             "createdBy": 96,
                             "updatedBy": 96,
                             "deletedAt": null,
@@ -99,7 +160,7 @@
                                 "freeQuantity": 1,
                                 "applyFor": "NIGHTS",
                                 "createdAt": "2024-06-17 09:07:45",
-                                "updatedAt": "2024-06-19 09:57:05",
+                                "updatedAt": "2024-06-22 10:33:46",
                                 "createdBy": 96,
                                 "updatedBy": 96
                             },
@@ -121,19 +182,76 @@
                                     "to": "2024-06-17 00:00:00"
                                 }
                             ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "id": 381,
                     "name": "RYAN-PRICE-TEST-2",
-                    "priceTotal": 100,
-                    "priceDeal": 100,
+                    "priceTotal": 300,
+                    "priceDeal": 300,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 381,
                             "roomTypeId": 25,
                             "isOpenPrice": true,
@@ -142,29 +260,153 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
-                        }
-                    ]
-                },
-                {
-                    "id": 396,
-                    "name": "RYAN-AIRBNB-TEST-3",
-                    "priceTotal": 130,
-                    "priceDeal": 130,
-                    "qty": 0,
-                    "description": "",
-                    "dailyPrices": [
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
                         {
-                            "date": "2024-06-20",
-                            "priceId": 396,
+                            "date": "2024-06-23",
+                            "priceId": 381,
                             "roomTypeId": 25,
                             "isOpenPrice": true,
-                            "roomPrice": 93.5,
-                            "totalPrice": 130,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 381,
+                            "roomTypeId": 25,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-22 10:33:46",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-22 10:33:46",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -314,7 +556,7 @@
             ]
         },
         {
-            "date": "2024-06-20",
+            "date": "2024-06-22",
             "roomTypeId": 26,
             "roomTypeName": "Studio Queen",
             "room": 10,
@@ -328,13 +570,13 @@
                 {
                     "id": 371,
                     "name": "Booking.com Price",
-                    "priceTotal": 105,
-                    "priceDeal": 105,
+                    "priceTotal": 315,
+                    "priceDeal": 315,
                     "qty": 0,
                     "description": "booking always",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 371,
                             "roomTypeId": 26,
                             "isOpenPrice": true,
@@ -343,20 +585,51 @@
                             "adultTotal": 3,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 371,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 92,
+                            "totalPrice": 105,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 371,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 92,
+                            "totalPrice": 105,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
-                    ]
+                    ],
+                    "promotions": []
                 },
                 {
                     "id": 380,
                     "name": "RYAN-PRICE-TEST-1",
-                    "priceTotal": 240,
-                    "priceDeal": 240,
+                    "priceTotal": 720,
+                    "priceDeal": 720,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 380,
                             "roomTypeId": 26,
                             "isOpenPrice": true,
@@ -365,7 +638,37 @@
                             "adultTotal": 3,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 380,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 380,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
                     ],
                     "promotions": [
@@ -379,14 +682,14 @@
                             "bookingDateFrom": null,
                             "bookingDateTo": null,
                             "applyTimeStayingDateType": "PERIOD",
-                            "stayingDateFrom": "2024-06-17 00:00:00",
-                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
                             "canRefund": false,
                             "refundDay": "1101111",
                             "refundAt": "CHECKIN_DATE",
                             "description": "",
                             "createdAt": "2024-06-17 09:07:45",
-                            "updatedAt": "2024-06-19 09:57:05",
+                            "updatedAt": "2024-06-22 10:33:46",
                             "createdBy": 96,
                             "updatedBy": 96,
                             "deletedAt": null,
@@ -403,7 +706,7 @@
                                 "freeQuantity": 1,
                                 "applyFor": "NIGHTS",
                                 "createdAt": "2024-06-17 09:07:45",
-                                "updatedAt": "2024-06-19 09:57:05",
+                                "updatedAt": "2024-06-22 10:33:46",
                                 "createdBy": 96,
                                 "updatedBy": 96
                             },
@@ -425,19 +728,76 @@
                                     "to": "2024-06-17 00:00:00"
                                 }
                             ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "id": 381,
                     "name": "RYAN-PRICE-TEST-2",
-                    "priceTotal": 100,
-                    "priceDeal": 100,
+                    "priceTotal": 300,
+                    "priceDeal": 300,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 381,
                             "roomTypeId": 26,
                             "isOpenPrice": true,
@@ -446,42 +806,166 @@
                             "adultTotal": 3,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
-                        }
-                    ]
-                },
-                {
-                    "id": 396,
-                    "name": "RYAN-AIRBNB-TEST-3",
-                    "priceTotal": 150,
-                    "priceDeal": 150,
-                    "qty": 0,
-                    "description": "",
-                    "dailyPrices": [
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
                         {
-                            "date": "2024-06-20",
-                            "priceId": 396,
+                            "date": "2024-06-23",
+                            "priceId": 381,
                             "roomTypeId": 26,
                             "isOpenPrice": true,
-                            "roomPrice": 113.5,
-                            "totalPrice": 150,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
                             "adultTotal": 3,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 381,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-22 10:33:46",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-22 10:33:46",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "id": 433,
                     "name": "BE same price (1R)",
-                    "priceTotal": 50,
-                    "priceDeal": 50,
+                    "priceTotal": 150,
+                    "priceDeal": 150,
                     "qty": 0,
                     "description": "",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 433,
                             "roomTypeId": 26,
                             "isOpenPrice": true,
@@ -490,9 +974,40 @@
                             "adultTotal": 3,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 433,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 43.5,
+                            "totalPrice": 50,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 433,
+                            "roomTypeId": 26,
+                            "isOpenPrice": true,
+                            "roomPrice": 43.5,
+                            "totalPrice": 50,
+                            "adultTotal": 3,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
-                    ]
+                    ],
+                    "promotions": []
                 }
             ],
             "property": [
@@ -602,7 +1117,7 @@
             ]
         },
         {
-            "date": "2024-06-20",
+            "date": "2024-06-22",
             "roomTypeId": 28,
             "roomTypeName": "Sky Villa",
             "room": 1,
@@ -616,13 +1131,13 @@
                 {
                     "id": 371,
                     "name": "Booking.com Price",
-                    "priceTotal": 107,
-                    "priceDeal": 107,
+                    "priceTotal": 321,
+                    "priceDeal": 321,
                     "qty": 0,
                     "description": "booking always",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 371,
                             "roomTypeId": 28,
                             "isOpenPrice": true,
@@ -631,20 +1146,51 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 371,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 94,
+                            "totalPrice": 107,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 371,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 94,
+                            "totalPrice": 107,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
-                    ]
+                    ],
+                    "promotions": []
                 },
                 {
                     "id": 380,
                     "name": "RYAN-PRICE-TEST-1",
-                    "priceTotal": 240,
-                    "priceDeal": 240,
+                    "priceTotal": 720,
+                    "priceDeal": 720,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 380,
                             "roomTypeId": 28,
                             "isOpenPrice": true,
@@ -653,7 +1199,37 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 380,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 380,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
                     ],
                     "promotions": [
@@ -667,14 +1243,14 @@
                             "bookingDateFrom": null,
                             "bookingDateTo": null,
                             "applyTimeStayingDateType": "PERIOD",
-                            "stayingDateFrom": "2024-06-17 00:00:00",
-                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
                             "canRefund": false,
                             "refundDay": "1101111",
                             "refundAt": "CHECKIN_DATE",
                             "description": "",
                             "createdAt": "2024-06-17 09:07:45",
-                            "updatedAt": "2024-06-19 09:57:05",
+                            "updatedAt": "2024-06-22 10:33:46",
                             "createdBy": 96,
                             "updatedBy": 96,
                             "deletedAt": null,
@@ -691,7 +1267,7 @@
                                 "freeQuantity": 1,
                                 "applyFor": "NIGHTS",
                                 "createdAt": "2024-06-17 09:07:45",
-                                "updatedAt": "2024-06-19 09:57:05",
+                                "updatedAt": "2024-06-22 10:33:46",
                                 "createdBy": 96,
                                 "updatedBy": 96
                             },
@@ -713,19 +1289,76 @@
                                     "to": "2024-06-17 00:00:00"
                                 }
                             ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "id": 381,
                     "name": "RYAN-PRICE-TEST-2",
-                    "priceTotal": 100,
-                    "priceDeal": 100,
+                    "priceTotal": 300,
+                    "priceDeal": 300,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 381,
                             "roomTypeId": 28,
                             "isOpenPrice": true,
@@ -734,42 +1367,166 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
-                        }
-                    ]
-                },
-                {
-                    "id": 396,
-                    "name": "RYAN-AIRBNB-TEST-3",
-                    "priceTotal": 170,
-                    "priceDeal": 170,
-                    "qty": 0,
-                    "description": "",
-                    "dailyPrices": [
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
                         {
-                            "date": "2024-06-20",
-                            "priceId": 396,
+                            "date": "2024-06-23",
+                            "priceId": 381,
                             "roomTypeId": 28,
                             "isOpenPrice": true,
-                            "roomPrice": 133.5,
-                            "totalPrice": 170,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 381,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-22 10:33:46",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-22 10:33:46",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "id": 435,
                     "name": "BE different price (1R)",
-                    "priceTotal": 120,
-                    "priceDeal": 120,
+                    "priceTotal": 360,
+                    "priceDeal": 360,
                     "qty": 0,
                     "description": "",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 435,
                             "roomTypeId": 28,
                             "isOpenPrice": true,
@@ -778,9 +1535,40 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 435,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 113.5,
+                            "totalPrice": 120,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 435,
+                            "roomTypeId": 28,
+                            "isOpenPrice": true,
+                            "roomPrice": 113.5,
+                            "totalPrice": 120,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
-                    ]
+                    ],
+                    "promotions": []
                 }
             ],
             "property": [
@@ -851,7 +1639,7 @@
             ]
         },
         {
-            "date": "2024-06-20",
+            "date": "2024-06-22",
             "roomTypeId": 29,
             "roomTypeName": "Studio Twin",
             "room": 3,
@@ -865,13 +1653,13 @@
                 {
                     "id": 371,
                     "name": "Booking.com Price",
-                    "priceTotal": 106,
-                    "priceDeal": 106,
+                    "priceTotal": 318,
+                    "priceDeal": 318,
                     "qty": 0,
                     "description": "booking always",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 371,
                             "roomTypeId": 29,
                             "isOpenPrice": true,
@@ -880,29 +1668,90 @@
                             "adultTotal": 2,
                             "childrenTotal": 0,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 371,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 93,
+                            "totalPrice": 106,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 371,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 93,
+                            "totalPrice": 106,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
-                    ]
+                    ],
+                    "promotions": []
                 },
                 {
-                    "id": 380,
-                    "name": "RYAN-PRICE-TEST-1",
-                    "priceTotal": 240,
-                    "priceDeal": 240,
+                    "id": 381,
+                    "name": "RYAN-PRICE-TEST-2",
+                    "priceTotal": 300,
+                    "priceDeal": 300,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
-                            "priceId": 380,
+                            "date": "2024-06-22",
+                            "priceId": 381,
                             "roomTypeId": 29,
                             "isOpenPrice": true,
-                            "roomPrice": 240,
-                            "totalPrice": 240,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
                             "adultTotal": 2,
                             "childrenTotal": 0,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 381,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 381,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
                     ],
                     "promotions": [
@@ -916,14 +1765,14 @@
                             "bookingDateFrom": null,
                             "bookingDateTo": null,
                             "applyTimeStayingDateType": "PERIOD",
-                            "stayingDateFrom": "2024-06-17 00:00:00",
-                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
                             "canRefund": false,
                             "refundDay": "1101111",
                             "refundAt": "CHECKIN_DATE",
                             "description": "",
                             "createdAt": "2024-06-17 09:07:45",
-                            "updatedAt": "2024-06-19 09:57:05",
+                            "updatedAt": "2024-06-22 10:33:46",
                             "createdBy": 96,
                             "updatedBy": 96,
                             "deletedAt": null,
@@ -940,7 +1789,7 @@
                                 "freeQuantity": 1,
                                 "applyFor": "NIGHTS",
                                 "createdAt": "2024-06-17 09:07:45",
-                                "updatedAt": "2024-06-19 09:57:05",
+                                "updatedAt": "2024-06-22 10:33:46",
                                 "createdBy": 96,
                                 "updatedBy": 96
                             },
@@ -962,63 +1811,244 @@
                                     "to": "2024-06-17 00:00:00"
                                 }
                             ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "id": 381,
-                    "name": "RYAN-PRICE-TEST-2",
-                    "priceTotal": 100,
-                    "priceDeal": 100,
+                    "id": 380,
+                    "name": "RYAN-PRICE-TEST-1",
+                    "priceTotal": 720,
+                    "priceDeal": 720,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
-                            "priceId": 381,
+                            "date": "2024-06-22",
+                            "priceId": 380,
                             "roomTypeId": 29,
                             "isOpenPrice": true,
-                            "roomPrice": 100,
-                            "totalPrice": 100,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
                             "adultTotal": 2,
                             "childrenTotal": 0,
                             "discountPercent": 0,
-                            "discountValue": 0
-                        }
-                    ]
-                },
-                {
-                    "id": 396,
-                    "name": "RYAN-AIRBNB-TEST-3",
-                    "priceTotal": 160,
-                    "priceDeal": 160,
-                    "qty": 0,
-                    "description": "",
-                    "dailyPrices": [
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
                         {
-                            "date": "2024-06-20",
-                            "priceId": 396,
+                            "date": "2024-06-23",
+                            "priceId": 380,
                             "roomTypeId": 29,
                             "isOpenPrice": true,
-                            "roomPrice": 123.5,
-                            "totalPrice": 160,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
                             "adultTotal": 2,
                             "childrenTotal": 0,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 380,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 240,
+                            "totalPrice": 240,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-22 10:33:46",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-22 10:33:46",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "id": 434,
                     "name": "BE same price (2R)",
-                    "priceTotal": 80,
-                    "priceDeal": 80,
+                    "priceTotal": 240,
+                    "priceDeal": 240,
                     "qty": 0,
                     "description": "",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 434,
                             "roomTypeId": 29,
                             "isOpenPrice": true,
@@ -1027,9 +2057,40 @@
                             "adultTotal": 2,
                             "childrenTotal": 0,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 434,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 73.5,
+                            "totalPrice": 80,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 434,
+                            "roomTypeId": 29,
+                            "isOpenPrice": true,
+                            "roomPrice": 73.5,
+                            "totalPrice": 80,
+                            "adultTotal": 2,
+                            "childrenTotal": 0,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
-                    ]
+                    ],
+                    "promotions": []
                 }
             ],
             "property": [
@@ -1118,7 +2179,7 @@
             ]
         },
         {
-            "date": "2024-06-20",
+            "date": "2024-06-22",
             "roomTypeId": 30,
             "roomTypeName": "Deluxe Classic",
             "room": 10,
@@ -1130,37 +2191,15 @@
             "view": "",
             "prices": [
                 {
-                    "id": 371,
-                    "name": "Booking.com Price",
-                    "priceTotal": 101,
-                    "priceDeal": 101,
-                    "qty": 0,
-                    "description": "booking always",
-                    "dailyPrices": [
-                        {
-                            "date": "2024-06-20",
-                            "priceId": 371,
-                            "roomTypeId": 30,
-                            "isOpenPrice": true,
-                            "roomPrice": 88,
-                            "totalPrice": 101,
-                            "adultTotal": 2,
-                            "childrenTotal": 1,
-                            "discountPercent": 0,
-                            "discountValue": 0
-                        }
-                    ]
-                },
-                {
                     "id": 380,
                     "name": "RYAN-PRICE-TEST-1",
-                    "priceTotal": 200,
-                    "priceDeal": 200,
+                    "priceTotal": 600,
+                    "priceDeal": 600,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 380,
                             "roomTypeId": 30,
                             "isOpenPrice": true,
@@ -1169,7 +2208,37 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 380,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 200,
+                            "totalPrice": 200,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 380,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 200,
+                            "totalPrice": 200,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
                     ],
                     "promotions": [
@@ -1183,14 +2252,14 @@
                             "bookingDateFrom": null,
                             "bookingDateTo": null,
                             "applyTimeStayingDateType": "PERIOD",
-                            "stayingDateFrom": "2024-06-17 00:00:00",
-                            "stayingDateTo": "2024-06-17 00:00:00",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
                             "canRefund": false,
                             "refundDay": "1101111",
                             "refundAt": "CHECKIN_DATE",
                             "description": "",
                             "createdAt": "2024-06-17 09:07:45",
-                            "updatedAt": "2024-06-19 09:57:05",
+                            "updatedAt": "2024-06-22 10:33:46",
                             "createdBy": 96,
                             "updatedBy": 96,
                             "deletedAt": null,
@@ -1207,7 +2276,7 @@
                                 "freeQuantity": 1,
                                 "applyFor": "NIGHTS",
                                 "createdAt": "2024-06-17 09:07:45",
-                                "updatedAt": "2024-06-19 09:57:05",
+                                "updatedAt": "2024-06-22 10:33:46",
                                 "createdBy": 96,
                                 "updatedBy": 96
                             },
@@ -1229,19 +2298,129 @@
                                     "to": "2024-06-17 00:00:00"
                                 }
                             ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
+                    "id": 371,
+                    "name": "Booking.com Price",
+                    "priceTotal": 303,
+                    "priceDeal": 303,
+                    "qty": 0,
+                    "description": "booking always",
+                    "dailyPrices": [
+                        {
+                            "date": "2024-06-22",
+                            "priceId": 371,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 88,
+                            "totalPrice": 101,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 371,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 88,
+                            "totalPrice": 101,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 371,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 88,
+                            "totalPrice": 101,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        }
+                    ],
+                    "promotions": []
+                },
+                {
                     "id": 381,
                     "name": "RYAN-PRICE-TEST-2",
-                    "priceTotal": 100,
-                    "priceDeal": 100,
+                    "priceTotal": 300,
+                    "priceDeal": 300,
                     "qty": 0,
                     "description": "do not touch",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 381,
                             "roomTypeId": 30,
                             "isOpenPrice": true,
@@ -1250,42 +2429,166 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
-                        }
-                    ]
-                },
-                {
-                    "id": 396,
-                    "name": "RYAN-AIRBNB-TEST-3",
-                    "priceTotal": 110,
-                    "priceDeal": 110,
-                    "qty": 0,
-                    "description": "",
-                    "dailyPrices": [
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
                         {
-                            "date": "2024-06-20",
-                            "priceId": 396,
+                            "date": "2024-06-23",
+                            "priceId": 381,
                             "roomTypeId": 30,
                             "isOpenPrice": true,
-                            "roomPrice": 73.5,
-                            "totalPrice": 110,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 381,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 100,
+                            "totalPrice": 100,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        }
+                    ],
+                    "promotions": [
+                        {
+                            "id": 1,
+                            "code": "RP001",
+                            "name": "RP001",
+                            "hotelId": 5,
+                            "promotionTypeId": 1,
+                            "applyTimeBookingDateType": "ALWAYS",
+                            "bookingDateFrom": null,
+                            "bookingDateTo": null,
+                            "applyTimeStayingDateType": "PERIOD",
+                            "stayingDateFrom": "2024-06-22 00:00:00",
+                            "stayingDateTo": "2024-06-22 23:59:00",
+                            "canRefund": false,
+                            "refundDay": "1101111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-17 09:07:45",
+                            "updatedAt": "2024-06-22 10:33:46",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 1,
+                            "promotionCondition": {
+                                "id": 1,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 10,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-17 09:07:45",
+                                "updatedAt": "2024-06-22 10:33:46",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 28,
+                                    "refId": 1,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 29,
+                                    "refId": 1,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-17 00:00:00",
+                                    "to": "2024-06-17 00:00:00"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "code": "PROMOTION123",
+                            "name": "PROMOTION123",
+                            "hotelId": 5,
+                            "promotionTypeId": 2,
+                            "applyTimeBookingDateType": "PERIOD",
+                            "bookingDateFrom": "2024-06-22 08:00:00",
+                            "bookingDateTo": "2024-06-22 23:59:59",
+                            "applyTimeStayingDateType": "ALWAYS",
+                            "stayingDateFrom": null,
+                            "stayingDateTo": null,
+                            "canRefund": true,
+                            "refundDay": "1111111",
+                            "refundAt": "CHECKIN_DATE",
+                            "description": "",
+                            "createdAt": "2024-06-18 14:29:42",
+                            "updatedAt": "2024-06-22 10:37:40",
+                            "createdBy": 96,
+                            "updatedBy": 96,
+                            "deletedAt": null,
+                            "deletedBy": null,
+                            "status": "ACTIVE",
+                            "promotionConditionId": 2,
+                            "promotionCondition": {
+                                "id": 2,
+                                "bookingEnginePromotionTypeId": 1,
+                                "applyAdjustmentType": "DISCOUNT",
+                                "rate": 5,
+                                "unit": "PERCENT",
+                                "minQuantityApply": 1,
+                                "freeQuantity": 1,
+                                "applyFor": "NIGHTS",
+                                "createdAt": "2024-06-18 14:29:42",
+                                "updatedAt": "2024-06-22 10:37:40",
+                                "createdBy": 96,
+                                "updatedBy": 96
+                            },
+                            "blackoutDateBookedDate": [
+                                {
+                                    "id": 32,
+                                    "refId": 2,
+                                    "blackoutDateType": "BOOKING_DATE",
+                                    "from": "2024-06-18 00:00:00",
+                                    "to": "2024-06-18 00:00:00"
+                                }
+                            ],
+                            "blackoutDateStayingDate": [
+                                {
+                                    "id": 33,
+                                    "refId": 2,
+                                    "blackoutDateType": "STAYING_DATE",
+                                    "from": "2024-06-23 00:00:00",
+                                    "to": "2024-06-23 00:00:00"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "id": 436,
                     "name": "BE different price (2R)",
-                    "priceTotal": 90,
-                    "priceDeal": 90,
+                    "priceTotal": 270,
+                    "priceDeal": 270,
                     "qty": 0,
                     "description": "",
                     "dailyPrices": [
                         {
-                            "date": "2024-06-20",
+                            "date": "2024-06-22",
                             "priceId": 436,
                             "roomTypeId": 30,
                             "isOpenPrice": true,
@@ -1294,9 +2597,40 @@
                             "adultTotal": 2,
                             "childrenTotal": 1,
                             "discountPercent": 0,
-                            "discountValue": 0
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-23",
+                            "priceId": 436,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 83.5,
+                            "totalPrice": 90,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
+                        },
+                        {
+                            "date": "2024-06-24",
+                            "priceId": 436,
+                            "roomTypeId": 30,
+                            "isOpenPrice": true,
+                            "roomPrice": 83.5,
+                            "totalPrice": 90,
+                            "adultTotal": 2,
+                            "childrenTotal": 1,
+                            "discountPercent": 0,
+                            "discountValue": 0,
+                            "promotionId": 0,
+                            "totalPriceAppliedPromotion": 0
                         }
-                    ]
+                    ],
+                    "promotions": []
                 }
             ],
             "property": [
