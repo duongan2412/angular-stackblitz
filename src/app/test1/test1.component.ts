@@ -26,7 +26,7 @@ export class Test1Component implements OnInit {
   ngOnInit() {
     this.roomTypeData = source.filteredMinimumAvailabilities;
     this.roomTypeFilter = source.filter;
-    console.log(DatetimeUtils.todayStr(DatetimeUtils.COMMON_DATE_FORMAT))
+    // console.log(DatetimeUtils.todayStr(DatetimeUtils.COMMON_DATE_FORMAT))
     this.checkPromotionApply(this.roomTypeData);
   }
 
@@ -55,7 +55,8 @@ export class Test1Component implements OnInit {
           price.promotions = this.checkPromotionValidBookingDate(price.promotions) ?? [];
         }
         price.appliedPromotion = this.checkPromotionBestValue(price);
-        console.log(price)
+
+        // console.log({ roomType: roomType.roomTypeId, price: price.id, promotions: price.promotions, appliedPromotion: price.appliedPromotion })
       }
     }
   }
@@ -87,6 +88,26 @@ export class Test1Component implements OnInit {
     return appliedBookingDatePromotions
   }
 
+  calPromotionByNight(price: any): BookingEnginePromotionApplied | null {
+    const result: BookingEnginePromotionApplied = {};
+    // Only check promotion type Every night and Total booking value
+    const { dailyPrices, promotions } = price;
+    if (promotions.length === 0) {
+      return null;
+    };
+
+    // Compare value of each promotion type apply
+    for (const promotion of promotions) {
+      const applicablePrices = this.getDaysApplicablePromotion(dailyPrices, promotion);
+      if (applicablePrices.length > 0) {
+        const { totalPromotionAmount, promotionDetail } = this.calculatePromotion(price, applicablePrices, promotion);
+        // console.log({ promotion, applicablePrices, totalPromotionAmount, promotionDetail })
+
+      }
+    }
+
+    return result
+  }
 
   checkPromotionBestValue(price: any): BookingEnginePromotionApplied | null {
     const result: BookingEnginePromotionApplied = {};
@@ -95,10 +116,16 @@ export class Test1Component implements OnInit {
     if (promotions.length === 0) {
       return null;
     };
+
     // Compare value of each promotion type apply
     for (const promotion of promotions) {
       const applicablePrices = this.getDaysApplicablePromotion(dailyPrices, promotion);
-      console.log({ promotion: promotion.code, applicablePrices });
+      // console.log({ promotion: promotion.code, applicablePrices, dailyPrices });
+      if (applicablePrices.length > 0) {
+        const { totalPromotionAmount, promotionDetail } = this.calculatePromotion(price, applicablePrices, promotion);
+        // console.log({ promotion, applicablePrices, totalPromotionAmount, promotionDetail })
+        console.table({totalPromotionAmount, promotionDetail :this.calculatePromotion(price, applicablePrices, promotion).promotionDetail})
+      }
     }
 
     return result
@@ -120,6 +147,50 @@ export class Test1Component implements OnInit {
 
       return true
     });
+  }
+
+  calculatePromotion(price: PriceBookingEngine, applicablePrices: DailyPrice[], promotion: BookingEnginePromotion): { totalPromotionAmount: number, promotionDetail: { promotionAmount: number, promotionId: number } } {
+    const condition = promotion.promotionCondition;
+    let totalPromotionAmount = 0;
+    let promotionAmount = 0;
+
+    const totalBookingValue = applicablePrices.reduce((curr: any, sum: any) => curr + (sum.totalPrice ?? 0), 0);
+
+    // Every night promotion
+    if (promotion.promotionType?.code === '1001') {
+      applicablePrices.forEach(dp => {
+        const dailyTotalPrice = dp.totalPrice;
+        if (condition.unit === BookingEnginePromotionConditioApplyUnitType.PERCENT) {
+          promotionAmount = condition.applyAdjustmentType === BookingEnginePromotionConditioAdjustmentType.DISCOUNT
+            ? -1 * dailyTotalPrice * (condition.rate! / 100)
+            : dailyTotalPrice * (condition.rate! / 100);
+        } else {
+          promotionAmount = condition.applyAdjustmentType === BookingEnginePromotionConditioAdjustmentType.DISCOUNT
+            ? -1 * condition.rate!
+            : condition.rate!;
+        }
+
+        totalPromotionAmount += promotionAmount;
+        dp.promotionsLst = dp.promotionsLst || [];
+        dp.promotionsLst.push({ promotionAmount, promotionId: promotion.id });
+      });
+    }
+
+    // Total booking value promotion
+    if (promotion.promotionType?.code === '1002' && price.qty > 0) {
+
+      if (condition.unit === BookingEnginePromotionConditioApplyUnitType.PERCENT) {
+        promotionAmount = condition.applyAdjustmentType === BookingEnginePromotionConditioAdjustmentType.DISCOUNT
+          ? -1 * totalBookingValue * (condition.rate! / 100)
+          : totalBookingValue * (condition.rate! / 100);
+      } else {
+        promotionAmount = condition.applyAdjustmentType === BookingEnginePromotionConditioAdjustmentType.DISCOUNT
+          ? -1 * condition.rate!
+          : condition.rate!;
+      }
+
+    }
+    return { totalPromotionAmount, promotionDetail: { promotionAmount: totalPromotionAmount, promotionId: promotion.id } };
   }
 
   hasOverlappingRanges(items: DynamicPriceItem[]): boolean {
@@ -150,20 +221,22 @@ export interface RoomTypeAvailability {
   netSize: number;
   description: string;
   view: string;
-  prices: Array<{
-    id: number;
-    name: string;
-    priceTotal: number;
-    priceDeal: number;
-    extraGuestFee: number;
-    maxGuest: number;
-    priceServices: PriceService[];
-    qty: number;
-    description: string;
-    dailyPrices: DailyPrice[];
-    promotions: BookingEnginePromotion[];
-    appliedPromotion?: BookingEnginePromotionApplied | null;
-  }>;
+  prices: PriceBookingEngine[];
+}
+
+interface PriceBookingEngine {
+  id: number;
+  name: string;
+  priceTotal: number;
+  priceDeal: number;
+  extraGuestFee: number;
+  maxGuest: number;
+  priceServices: PriceService[];
+  qty: number;
+  description: string;
+  dailyPrices: DailyPrice[];
+  promotions: BookingEnginePromotion[];
+  appliedPromotion?: BookingEnginePromotionApplied | null;
 }
 
 interface BookingEnginePromotionApplied {
@@ -181,7 +254,9 @@ interface DailyPrice {
   childrenTotal: number;
   discountPercent: number;
   discountValue: number;
-  totalPriceAppliedPromotion: number;
+  promotionId: number | null;
+  promotionAmount: number;
+  promotionsLst: { promotionId: number, promotionAmount: number }[];
 }
 
 interface BookingEnginePromotion {
@@ -213,6 +288,7 @@ interface BookingEnginePromotion {
   bookingEnginePromotionRatePlans: BookingEnginePromotionRatePlan[];
   promotionCondition: BookingEnginePromotionCondition;
   isActive?: boolean;
+  promotionType?: BookingEnginePromotionType;
 }
 
 interface BookingEnginePromotionBlackoutDate {
@@ -284,4 +360,12 @@ interface DynamicPriceItem {
   friday?: number;
   saturday?: number;
   sunday?: number;
+}
+
+interface BookingEnginePromotionType {
+  id: number;
+  code: string;
+  name: string;
+  description?: string;
+  status: COMMON_STATUS;
 }
