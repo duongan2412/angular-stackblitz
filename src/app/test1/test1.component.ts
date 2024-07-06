@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 // import * as moment from 'moment';
 import moment from 'moment';
 import source from '../source/BookingEnginePromotion.json';
+import cart from '../source/BookingCart.json'
 import { BlackoutDateRefType, BlackoutDateType, BookingEnginePromotionApplyTimeType, BookingEnginePromotionConditioAdjustmentType, BookingEnginePromotionConditioApplyUnitType, BookingEnginePromotionConditionApplyForType, COMMON_STATUS } from '../enum/enum';
 import { DatetimeUtils } from '../models/datetime-utils';
+import { Helper } from '../utils/helps';
 
 @Component({
   selector: 'app-test1',
@@ -22,192 +24,161 @@ export class Test1Component implements OnInit {
     { id: 2, fromValue: 51, toValue: 55, monday: 0, tuesday: 0, wednesday: 0, thursday: 0, friday: 0, saturday: 0, sunday: 0 },
     { id: 3, fromValue: 61, toValue: 100, monday: 0, tuesday: 0, wednesday: 0, thursday: 0, friday: 0, saturday: 0, sunday: 0 }
   ]
+  bookingCart: any;
 
   ngOnInit() {
     this.roomTypeData = source.filteredMinimumAvailabilities;
     this.roomTypeFilter = source.filter;
-    // console.log(DatetimeUtils.todayStr(DatetimeUtils.COMMON_DATE_FORMAT))
-    this.checkPromotionApply(this.roomTypeData);
+    this.bookingCart = cart;
+    // this.checkPromotionApply(this.bookingCart);
+    // this.applyPromotionsToPrices(this.roomTypeData);
+    // const bo: BookingEnginePromotionBlackoutDate[] = [{blackoutDateType: BlackoutDateType.BOOKING_DATE, from: "2024-06-26 00:00:00", id: 39, refId: 4, to:"2024-06-26 23:59:59"}]
+    // console.log('inrange', this.isDateInRange('2024-06-26 15:56:45', '2024-06-26 00:00:00', '2024-06-26 23:59:59'))
+    // console.log('blackout', this.isDateInBlackout('2024-06-26 15:56:45', bo))
+    this.calculateBestPromotion(this.bookingCart);
+    const promotion = [{promotionAmount: 50}, {promotionAmount: 20}, {promotionAmount: 0}]
+    console.log({pro: this.getBestPromotion(promotion)})
   }
 
   isDateInBlackout(date: string, blackouts: BookingEnginePromotionBlackoutDate[]): boolean {
-    return blackouts.some(blackout => this.isDateInRange(date, moment(blackout.from).format(DatetimeUtils.COMMON_DATE_FORMAT), moment(blackout.to).format(DatetimeUtils.COMMON_DATE_FORMAT)));
+    return blackouts.some(blackout => this.isDateInRange(date, moment(blackout.from).startOf('days').format(DatetimeUtils.COMMON_DATETIME_FORMAT), moment(blackout.to).endOf('days').format(DatetimeUtils.COMMON_DATETIME_FORMAT)));
+  }
+
+  checkPromotionValidBookingDate(promotion: BookingEnginePromotion): boolean {
+    if (!promotion) {
+      return false;
+    }
+    const currentBookingDate = moment().format(DatetimeUtils.COMMON_DATETIME_FORMAT);
+    console.log({ currentBookingDate })
+    // Check apply time booking date type
+    if (promotion.applyTimeBookingDateType === BookingEnginePromotionApplyTimeType.PERIOD) {
+      if (!this.isDateInRange(currentBookingDate, promotion.bookingDateFrom, promotion.bookingDateTo)) {
+        return false;
+      }
+    };
+
+    // Check apply blackout of booking date validity
+    if (promotion.blackoutDateBookedDate && promotion.blackoutDateBookedDate.length > 0) {
+      if (this.isDateInBlackout(currentBookingDate, promotion.blackoutDateBookedDate!)) {
+        return false;
+      };
+    }
+
+    return true;
   }
 
   isDateInRange(date: string, from?: string, to?: string): boolean {
-    const targetDate = new Date(date);
-    if (from && targetDate < new Date(from)) {
+    const targetDate = moment(date).toDate();
+    if (from && targetDate < moment(from).toDate()) {
       return false;
     }
-    if (to && targetDate > new Date(to)) {
+    if (to && targetDate > moment(to).toDate()) {
       return false;
     }
     return true;
   }
 
-  checkPromotionApply(roomTypes: RoomTypeAvailability[]) {
-    if (!roomTypes || roomTypes.length === 0) {
-      return;
-    };
-    for (const roomType of roomTypes) {
-      for (const price of roomType.prices) {
-        if (price.promotions && price.promotions.length > 0) {
-          price.promotions = this.checkPromotionValidBookingDate(price.promotions) ?? [];
-        }
-        price.appliedPromotion = this.checkPromotionBestValue(price);
-
-        // console.log({ roomType: roomType.roomTypeId, price: price.id, promotions: price.promotions, appliedPromotion: price.appliedPromotion })
-      }
+  calculateBestPromotion(cartItems: BookingCart[]): void {
+    // Apply the best overall promotion for each cart item
+    console.log({ cartItems })
+    for (const cartItem of cartItems) {
+      this.findBestPromotion(cartItem, cartItems);
     }
   }
 
-  checkPromotionValidBookingDate(promotions: BookingEnginePromotion[]): BookingEnginePromotion[] | null {
+  findBestPromotion(cartItem: BookingCart, allCartItems: BookingCart[]): void {
+    const { price } = cartItem;
+    const { promotions, totalPromotionAmount: bestNightPromotionAmount } = price;
+
     if (!promotions || promotions.length === 0) {
-      return null;
+      return;
     }
-    const currentBookingDate = DatetimeUtils.todayStr();
-    const appliedBookingDatePromotions = promotions.filter((promotion: BookingEnginePromotion) => {
-      if (promotion.status !== COMMON_STATUS.ACTIVE) {
-        return false;
-      };
+    console.log({ cartItem })
+    let bestPromotion: BookingEnginePromotion | null = null;
+    let maxPromotionValue = bestNightPromotionAmount || 0;
 
-      // Check apply booking date validity
-      if (promotion.applyTimeBookingDateType === BookingEnginePromotionApplyTimeType.PERIOD) {
-        if (!this.isDateInRange(currentBookingDate, promotion.bookingDateFrom, promotion.bookingDateTo)) {
-          return false;
-        }
-      };
-
-      // Check apply blackout of booking date validity
-      if (this.isDateInBlackout(currentBookingDate, promotion.blackoutDateBookedDate)) {
-        return false;
-      };
-
-      return true;
-    });
-    return appliedBookingDatePromotions
-  }
-
-  calPromotionByNight(price: any): BookingEnginePromotionApplied | null {
-    const result: BookingEnginePromotionApplied = {};
-    // Only check promotion type Every night and Total booking value
-    const { dailyPrices, promotions } = price;
-    if (promotions.length === 0) {
-      return null;
+    // Promotion by night is already calculated in BE and stored in bestNightPromotionAmount
+    let bestPromotionByNight = {
+      promotionId: price.promotionAppliedId,
+      promotionCode: price.promotionAppliedCode,
+      promotionAmount: price.totalPromotionAmount
     };
+    // console.log({bestPromotionByNight});
 
-    // Compare value of each promotion type apply
-    for (const promotion of promotions) {
-      const applicablePrices = this.getDaysApplicablePromotion(dailyPrices, promotion);
-      if (applicablePrices.length > 0) {
-        const { totalPromotionAmount, promotionDetail } = this.calculatePromotion(price, applicablePrices, promotion);
-        // console.log({ promotion, applicablePrices, totalPromotionAmount, promotionDetail })
+    // Calculate best promotion by total value
+    const bestPromotionByTotalValue = this.calculateBestTotalValuePromotion(cartItem, allCartItems);
+    console.log({ bestPromotionByTotalValue })
 
-      }
+    if (bestPromotion) {
+      console.log({ bestPromotion })
+      // cartItem.bestPromotion = bestPromotion;
+      // cartItem.price.totalPrice = cartItem.price.totalPriceOriginal - bestPromotion.promotionAmount;
     }
-
-    return result
   }
 
-  checkPromotionBestValue(price: any): BookingEnginePromotionApplied | null {
-    const result: BookingEnginePromotionApplied = {};
-    // Only check promotion type Every night and Total booking value
-    const { dailyPrices, promotions } = price;
-    if (promotions.length === 0) {
-      return null;
-    };
+  calculateBestTotalValuePromotion(cartItem: BookingCart, allCartItems: BookingCart[]): BestPromotion {
+    const { price } = cartItem;
+    const samePriceItems = allCartItems.filter(item => item.price.id === price.id);
+    let bestPromotion: BestPromotion = { promotionAmount: 0, promotionCode: '', promotionId: 0 };
 
-    // Compare value of each promotion type apply
-    for (const promotion of promotions) {
-      const applicablePrices = this.getDaysApplicablePromotion(dailyPrices, promotion);
-      // console.log({ promotion: promotion.code, applicablePrices, dailyPrices });
-      if (applicablePrices.length > 0) {
-        const { totalPromotionAmount, promotionDetail } = this.calculatePromotion(price, applicablePrices, promotion);
-        // console.log({ promotion, applicablePrices, totalPromotionAmount, promotionDetail })
-        console.table({totalPromotionAmount, promotionDetail :this.calculatePromotion(price, applicablePrices, promotion).promotionDetail})
-      }
-    }
+    price.promotions.forEach(promotion => {
+      if (promotion.promotionType?.code === '1002') {
+        const applicablePrices: DailyPriceBookingEngine[] = [];
+        samePriceItems.forEach(item => {
+          const filteredPrices = this.getDaysApplicablePromotion(item.price.dailyPrices, promotion);
+          applicablePrices.push(...filteredPrices);
+        });
+        console.log({ applicablePrices })
+        if (applicablePrices.length > 0) {
+          const totalPrice = samePriceItems.reduce((sum, item) => sum + (item.price.totalPriceOriginal ?? 0), 0);
+          const totalPromotionAmount = promotion.promotionCondition.unit === 'PERCENT'
+            ? totalPrice * Helper.round2d(promotion.promotionCondition.rate! / 100)
+            : promotion.promotionCondition.rate!;
 
-    return result
-  }
-
-  getDaysApplicablePromotion(dailyPrices: DailyPrice[], promotion: BookingEnginePromotion): DailyPrice[] {
-    return dailyPrices.filter((dp: DailyPrice) => {
-      if (promotion.applyTimeStayingDateType === BookingEnginePromotionApplyTimeType.PERIOD) {
-        // Check apply staying date validity
-        if (!this.isDateInRange(dp.date, promotion.stayingDateFrom, promotion.stayingDateTo)) {
-          return false;
+          if (totalPromotionAmount < bestPromotion.promotionAmount || bestPromotion.promotionAmount === 0) {
+            bestPromotion = {
+              promotionAmount: totalPromotionAmount,
+              promotionCode: promotion.code ?? '',
+              promotionId: promotion.id
+            };
+          }
         }
       }
-
-      // Check apply blackout of staying date validity
-      if (this.isDateInBlackout(dp.date, promotion.blackoutDateStayingDate)) {
-        return false;
-      }
-
-      return true
     });
+
+    return bestPromotion;
   }
 
-  calculatePromotion(price: PriceBookingEngine, applicablePrices: DailyPrice[], promotion: BookingEnginePromotion): { totalPromotionAmount: number, promotionDetail: { promotionAmount: number, promotionId: number } } {
-    const condition = promotion.promotionCondition;
-    let totalPromotionAmount = 0;
-    let promotionAmount = 0;
+  getDaysApplicablePromotion(dailyPrices: DailyPriceBookingEngine[], promotion: BookingEnginePromotion): DailyPriceBookingEngine[] {
+    return dailyPrices.filter(dp => this.isApplicable(dp.date, promotion));
+  }
 
-    const totalBookingValue = applicablePrices.reduce((curr: any, sum: any) => curr + (sum.totalPrice ?? 0), 0);
+  isApplicable(date: string, promotion: BookingEnginePromotion): boolean {
+    return this.isDateInRange(date, promotion.stayingDateFrom, promotion.stayingDateTo) && !this.isDateInBlackout(date, promotion.blackoutDateStayingDate);
+  }
 
-    // Every night promotion
-    if (promotion.promotionType?.code === '1001') {
-      applicablePrices.forEach(dp => {
-        const dailyTotalPrice = dp.totalPrice;
-        if (condition.unit === BookingEnginePromotionConditioApplyUnitType.PERCENT) {
-          promotionAmount = condition.applyAdjustmentType === BookingEnginePromotionConditioAdjustmentType.DISCOUNT
-            ? -1 * dailyTotalPrice * (condition.rate! / 100)
-            : dailyTotalPrice * (condition.rate! / 100);
-        } else {
-          promotionAmount = condition.applyAdjustmentType === BookingEnginePromotionConditioAdjustmentType.DISCOUNT
-            ? -1 * condition.rate!
-            : condition.rate!;
+  getBestPromotion(promotions: any[]): any {
+    let bestPromotion: any = null;
+
+    promotions.forEach(promotion => {
+        if (promotion.promotionAmount < 0) {
+            if (bestPromotion === null || bestPromotion.promotionAmount >= 0 || promotion.promotionAmount < bestPromotion.promotionAmount) {
+                bestPromotion = promotion;
+            }
+        } else if (promotion.promotionAmount > 0) {
+            if (bestPromotion === null || bestPromotion.promotionAmount >= 0 && (bestPromotion.promotionAmount === 0 || promotion.promotionAmount < bestPromotion.promotionAmount)) {
+                bestPromotion = promotion;
+            }
+        } else if (promotion.promotionAmount === 0 && (bestPromotion === null || bestPromotion.promotionAmount === 0)) {
+            bestPromotion = promotion;
         }
+    });
 
-        totalPromotionAmount += promotionAmount;
-        dp.promotionsLst = dp.promotionsLst || [];
-        dp.promotionsLst.push({ promotionAmount, promotionId: promotion.id });
-      });
-    }
+    return bestPromotion;
+}
 
-    // Total booking value promotion
-    if (promotion.promotionType?.code === '1002' && price.qty > 0) {
 
-      if (condition.unit === BookingEnginePromotionConditioApplyUnitType.PERCENT) {
-        promotionAmount = condition.applyAdjustmentType === BookingEnginePromotionConditioAdjustmentType.DISCOUNT
-          ? -1 * totalBookingValue * (condition.rate! / 100)
-          : totalBookingValue * (condition.rate! / 100);
-      } else {
-        promotionAmount = condition.applyAdjustmentType === BookingEnginePromotionConditioAdjustmentType.DISCOUNT
-          ? -1 * condition.rate!
-          : condition.rate!;
-      }
 
-    }
-    return { totalPromotionAmount, promotionDetail: { promotionAmount: totalPromotionAmount, promotionId: promotion.id } };
-  }
-
-  hasOverlappingRanges(items: DynamicPriceItem[]): boolean {
-    // Sort the items by their fromValue
-    const sortedItems = items.sort((a, b) => a.fromValue! - b.fromValue!);
-    // Check for overlaps between consecutive items
-    for (let i = 0; i < sortedItems.length - 1; i++) {
-      const currentItem = sortedItems[i];
-      const nextItem = sortedItems[i + 1];
-
-      if (currentItem.toValue! >= nextItem.fromValue!) {
-        return true; // Overlap found
-      }
-    }
-
-    return false; // No overlaps
-  }
 }
 
 export interface RoomTypeAvailability {
@@ -224,26 +195,25 @@ export interface RoomTypeAvailability {
   prices: PriceBookingEngine[];
 }
 
-interface PriceBookingEngine {
+
+export interface PriceBookingEngine {
   id: number;
   name: string;
   priceTotal: number;
-  priceDeal: number;
   extraGuestFee: number;
   maxGuest: number;
   priceServices: PriceService[];
   qty: number;
   description: string;
-  dailyPrices: DailyPrice[];
+  dailyPrices: DailyPriceBookingEngine[];
   promotions: BookingEnginePromotion[];
-  appliedPromotion?: BookingEnginePromotionApplied | null;
+  totalPriceOriginal?: number;
+  totalPromotionAmount?: number;
+  promotionAppliedId?: number;
+  promotionAppliedCode?: string;
 }
 
-interface BookingEnginePromotionApplied {
-
-}
-
-interface DailyPrice {
+export interface DailyPriceBookingEngine {
   date: string;
   priceId: number;
   roomTypeId: number;
@@ -254,10 +224,10 @@ interface DailyPrice {
   childrenTotal: number;
   discountPercent: number;
   discountValue: number;
-  promotionId: number | null;
-  promotionAmount: number;
-  promotionsLst: { promotionId: number, promotionAmount: number }[];
+  priceOriginal?: number;
+  promotionAmount?: number;
 }
+
 
 interface BookingEnginePromotion {
   id: number;
@@ -292,14 +262,14 @@ interface BookingEnginePromotion {
 }
 
 interface BookingEnginePromotionBlackoutDate {
-  id: number;
-  refId: number;
+  id?: number;
+  refId?: number;
   refType?: BlackoutDateRefType;
   blackoutDateType?: BlackoutDateType;
   createdAt?: string;
   updatedAt?: string;
   deletedAt?: string;
-  createdBy: number;
+  createdBy?: number;
   updatedBy?: number;
   deletedBy?: number;
   status?: COMMON_STATUS;
@@ -369,3 +339,66 @@ interface BookingEnginePromotionType {
   description?: string;
   status: COMMON_STATUS;
 }
+
+interface BookingCart {
+  checkIn: string;
+  checkOut: string;
+  roomTypeId: number;
+  roomTypeName: string;
+  maxRoom: number;
+  maxAdult: number;
+  maxChildren: number;
+  maxBaby?: number;
+  roomProperty: { id: number, type: string, refId: number, propId: number, propName: string }[];
+  price: PriceBookingEngine;
+  confirmCode?: string;
+  hotelCode?: string;
+  cartStatus?: string;
+}
+
+export interface DailyPriceBookingEngine {
+  date: string;
+  priceId: number;
+  roomTypeId: number;
+  isOpenPrice: boolean;
+  roomPrice: number;
+  totalPrice: number;
+  adultTotal: number;
+  childrenTotal: number;
+  discountPercent: number;
+  discountValue: number;
+  promotionId?: number | null;
+  promotionCode?: string;
+  promotionAmount?: number;
+}
+
+export interface RoomTypeBookingEngine {
+  date: string;
+  roomTypeId: number;
+  roomTypeName: string;
+  room: number;
+  adult: number;
+  children: number;
+  baby: number;
+  netSize: number;
+  description: string;
+  view: string;
+  prices: PriceBookingEngine[];
+  property: Array<{
+    id: boolean;
+    propId: number;
+    refId: number;
+    type: string;
+    propName: string;
+  }>;
+  images: Array<{
+    id: number;
+    src: string;
+  }>;
+}
+
+type BestPromotion = {
+  promotionAmount: number;
+  promotionCode: string;
+  promotionId: number;
+};

@@ -1,0 +1,1225 @@
+[
+    {
+        "checkIn": "2024-06-28",
+        "checkOut": "2024-06-29",
+        "roomTypeId": 25,
+        "roomTypeName": "Duplex Suite",
+        "maxRoom": 2,
+        "price": {
+            "id": 380,
+            "name": "RYAN-PRICE-TEST-1",
+            "priceTotal": 240,
+            "qty": 1,
+            "description": "do not touch",
+            "dailyPrices": [
+                {
+                    "date": "2024-06-28",
+                    "priceId": 380,
+                    "roomTypeId": 25,
+                    "isOpenPrice": true,
+                    "roomPrice": 300,
+                    "totalPrice": 240,
+                    "adultTotal": 2,
+                    "childrenTotal": 1,
+                    "discountPercent": 0,
+                    "discountValue": 0,
+                    "priceOriginal": 300,
+                    "promotionAmount": -60
+                }
+            ],
+            "totalPriceOriginal": 300,
+            "totalPromotionAmount": -60,
+            "promotions": [
+                {
+                    "id": 2,
+                    "code": "DISCOUNT FOR TOTAL",
+                    "name": "PROMOTION123",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "ALWAYS",
+                    "bookingDateFrom": null,
+                    "bookingDateTo": null,
+                    "applyTimeStayingDateType": "PERIOD",
+                    "stayingDateFrom": "2024-06-28 00:00:00",
+                    "stayingDateTo": "2024-06-28 23:59:59",
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-18 14:29:42",
+                    "updatedAt": "2024-06-28 14:11:54",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 2,
+                    "promotionTypeId": 2,
+                    "promotionType": {
+                        "id": 2,
+                        "code": "1002",
+                        "name": "Total booking value",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 2,
+                        "bookingEnginePromotionTypeId": 1,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 5,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-18 14:29:42",
+                        "updatedAt": "2024-06-28 14:11:54",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [
+                        {
+                            "id": 32,
+                            "refId": 2,
+                            "blackoutDateType": "BOOKING_DATE",
+                            "from": "2024-06-18 00:00:00",
+                            "to": "2024-06-18 23:59:59"
+                        }
+                    ],
+                    "blackoutDateStayingDate": [
+                        {
+                            "id": 33,
+                            "refId": 2,
+                            "blackoutDateType": "STAYING_DATE",
+                            "from": "2024-06-23 00:00:00",
+                            "to": "2024-06-23 23:59:59"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "code": "SUPER DEAL NIGHTS 1",
+                    "name": "SDSD",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "ALWAYS",
+                    "bookingDateFrom": null,
+                    "bookingDateTo": null,
+                    "applyTimeStayingDateType": "PERIOD",
+                    "stayingDateFrom": "2024-06-24 00:00:00",
+                    "stayingDateTo": "2024-06-30 23:59:59",
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-23 19:54:47",
+                    "updatedAt": "2024-06-28 01:23:30",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 3,
+                    "promotionTypeId": 1,
+                    "promotionType": {
+                        "id": 1,
+                        "code": "1001",
+                        "name": "Every night",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 3,
+                        "bookingEnginePromotionTypeId": 1,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 20,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-23 19:54:47",
+                        "updatedAt": "2024-06-28 01:23:30",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [],
+                    "blackoutDateStayingDate": []
+                },
+                {
+                    "id": 4,
+                    "code": "BOOK X FREE Y",
+                    "name": "BOOK X FREE Y",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "PERIOD",
+                    "bookingDateFrom": "2024-06-24 00:00:00",
+                    "bookingDateTo": "2024-06-30 23:59:59",
+                    "applyTimeStayingDateType": "ALWAYS",
+                    "stayingDateFrom": null,
+                    "stayingDateTo": null,
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-25 15:36:18",
+                    "updatedAt": "2024-06-26 14:52:37",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 4,
+                    "promotionTypeId": 3,
+                    "promotionType": {
+                        "id": 3,
+                        "code": "1003",
+                        "name": "Book quantity x, free quantity y",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 4,
+                        "bookingEnginePromotionTypeId": 3,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 0,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-25 15:36:18",
+                        "updatedAt": "2024-06-26 14:52:37",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [
+                        {
+                            "id": 39,
+                            "refId": 4,
+                            "blackoutDateType": "BOOKING_DATE",
+                            "from": "2024-06-26 00:00:00",
+                            "to": "2024-06-26 23:59:59"
+                        }
+                    ],
+                    "blackoutDateStayingDate": []
+                }
+            ],
+            "promotionAppliedId": 3,
+            "promotionAppliedCode": "SUPER DEAL NIGHTS 1",
+            "adult": 2,
+            "children": 1,
+            "nights": 1,
+            "maxRoom": 1
+        },
+        "roomProperty": [
+            {
+                "id": 12,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 14,
+                "propName": "Smoking"
+            },
+            {
+                "id": 13,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 11,
+                "propName": "NON-SMOKING ROOM"
+            },
+            {
+                "id": 14,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 10,
+                "propName": "NEAR ELEVATION"
+            },
+            {
+                "id": 34,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 23,
+                "propName": "Rooftop pool"
+            },
+            {
+                "id": 35,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 12,
+                "propName": "QUIET ROOM"
+            },
+            {
+                "id": 36,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 25,
+                "propName": "Sea view"
+            },
+            {
+                "id": 37,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 18,
+                "propName": "City view"
+            },
+            {
+                "id": 38,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 17,
+                "propName": "Air conditioning"
+            },
+            {
+                "id": 39,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 19,
+                "propName": "Flat-screen TV"
+            },
+            {
+                "id": 40,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 13,
+                "propName": "Non-smoking"
+            },
+            {
+                "id": 41,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 21,
+                "propName": "Spa bath"
+            },
+            {
+                "id": 42,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 20,
+                "propName": "Minibar"
+            },
+            {
+                "id": 43,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 15,
+                "propName": "Balcony"
+            }
+        ],
+        "totalPrice": 240,
+        "totalPriceOriginal": 300,
+        "totalPromotionAmount": -60
+    },
+    {
+        "checkIn": "2024-06-28",
+        "checkOut": "2024-06-29",
+        "roomTypeId": 25,
+        "roomTypeName": "Duplex Suite",
+        "maxRoom": 2,
+        "price": {
+            "id": 381,
+            "name": "RYAN-PRICE-TEST-2",
+            "priceTotal": 90,
+            "qty": 1,
+            "description": "do not touch",
+            "dailyPrices": [
+                {
+                    "date": "2024-06-28",
+                    "priceId": 381,
+                    "roomTypeId": 25,
+                    "isOpenPrice": true,
+                    "roomPrice": 100,
+                    "totalPrice": 90,
+                    "adultTotal": 2,
+                    "childrenTotal": 1,
+                    "discountPercent": 0,
+                    "discountValue": 0,
+                    "priceOriginal": 100,
+                    "promotionAmount": -10
+                }
+            ],
+            "totalPriceOriginal": 100,
+            "totalPromotionAmount": -10,
+            "promotions": [
+                {
+                    "id": 2,
+                    "code": "DISCOUNT FOR TOTAL",
+                    "name": "PROMOTION123",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "ALWAYS",
+                    "bookingDateFrom": null,
+                    "bookingDateTo": null,
+                    "applyTimeStayingDateType": "PERIOD",
+                    "stayingDateFrom": "2024-06-28 00:00:00",
+                    "stayingDateTo": "2024-06-28 23:59:59",
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-18 14:29:42",
+                    "updatedAt": "2024-06-28 14:11:54",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 2,
+                    "promotionTypeId": 2,
+                    "promotionType": {
+                        "id": 2,
+                        "code": "1002",
+                        "name": "Total booking value",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 2,
+                        "bookingEnginePromotionTypeId": 1,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 5,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-18 14:29:42",
+                        "updatedAt": "2024-06-28 14:11:54",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [
+                        {
+                            "id": 32,
+                            "refId": 2,
+                            "blackoutDateType": "BOOKING_DATE",
+                            "from": "2024-06-18 00:00:00",
+                            "to": "2024-06-18 23:59:59"
+                        }
+                    ],
+                    "blackoutDateStayingDate": [
+                        {
+                            "id": 33,
+                            "refId": 2,
+                            "blackoutDateType": "STAYING_DATE",
+                            "from": "2024-06-23 00:00:00",
+                            "to": "2024-06-23 23:59:59"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "code": "SUPER DEAL NIGHTS",
+                    "name": "RP001",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "ALWAYS",
+                    "bookingDateFrom": null,
+                    "bookingDateTo": null,
+                    "applyTimeStayingDateType": "PERIOD",
+                    "stayingDateFrom": "2024-06-22 00:00:00",
+                    "stayingDateTo": "2024-06-30 23:59:00",
+                    "canRefund": false,
+                    "refundDay": "1101111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-17 09:07:45",
+                    "updatedAt": "2024-06-28 01:23:22",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 1,
+                    "promotionTypeId": 1,
+                    "promotionType": {
+                        "id": 1,
+                        "code": "1001",
+                        "name": "Every night",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 1,
+                        "bookingEnginePromotionTypeId": 1,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 10,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-17 09:07:45",
+                        "updatedAt": "2024-06-28 01:23:22",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [],
+                    "blackoutDateStayingDate": []
+                },
+                {
+                    "id": 4,
+                    "code": "BOOK X FREE Y",
+                    "name": "BOOK X FREE Y",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "PERIOD",
+                    "bookingDateFrom": "2024-06-24 00:00:00",
+                    "bookingDateTo": "2024-06-30 23:59:59",
+                    "applyTimeStayingDateType": "ALWAYS",
+                    "stayingDateFrom": null,
+                    "stayingDateTo": null,
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-25 15:36:18",
+                    "updatedAt": "2024-06-26 14:52:37",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 4,
+                    "promotionTypeId": 3,
+                    "promotionType": {
+                        "id": 3,
+                        "code": "1003",
+                        "name": "Book quantity x, free quantity y",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 4,
+                        "bookingEnginePromotionTypeId": 3,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 0,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-25 15:36:18",
+                        "updatedAt": "2024-06-26 14:52:37",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [
+                        {
+                            "id": 39,
+                            "refId": 4,
+                            "blackoutDateType": "BOOKING_DATE",
+                            "from": "2024-06-26 00:00:00",
+                            "to": "2024-06-26 23:59:59"
+                        }
+                    ],
+                    "blackoutDateStayingDate": []
+                }
+            ],
+            "promotionAppliedId": 1,
+            "promotionAppliedCode": "SUPER DEAL NIGHTS",
+            "adult": 2,
+            "children": 1,
+            "nights": 1,
+            "maxRoom": 1
+        },
+        "roomProperty": [
+            {
+                "id": 12,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 14,
+                "propName": "Smoking"
+            },
+            {
+                "id": 13,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 11,
+                "propName": "NON-SMOKING ROOM"
+            },
+            {
+                "id": 14,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 10,
+                "propName": "NEAR ELEVATION"
+            },
+            {
+                "id": 34,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 23,
+                "propName": "Rooftop pool"
+            },
+            {
+                "id": 35,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 12,
+                "propName": "QUIET ROOM"
+            },
+            {
+                "id": 36,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 25,
+                "propName": "Sea view"
+            },
+            {
+                "id": 37,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 18,
+                "propName": "City view"
+            },
+            {
+                "id": 38,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 17,
+                "propName": "Air conditioning"
+            },
+            {
+                "id": 39,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 19,
+                "propName": "Flat-screen TV"
+            },
+            {
+                "id": 40,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 13,
+                "propName": "Non-smoking"
+            },
+            {
+                "id": 41,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 21,
+                "propName": "Spa bath"
+            },
+            {
+                "id": 42,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 20,
+                "propName": "Minibar"
+            },
+            {
+                "id": 43,
+                "type": "ROOM_TYPE",
+                "refId": 25,
+                "propId": 15,
+                "propName": "Balcony"
+            }
+        ],
+        "totalPrice": 90,
+        "totalPriceOriginal": 100,
+        "totalPromotionAmount": -10
+    },
+    {
+        "checkIn": "2024-06-28",
+        "checkOut": "2024-06-29",
+        "roomTypeId": 26,
+        "roomTypeName": "Studio Queen",
+        "maxRoom": 10,
+        "price": {
+            "id": 371,
+            "name": "Booking.com Price",
+            "priceTotal": 105,
+            "qty": 1,
+            "description": "booking always",
+            "dailyPrices": [
+                {
+                    "date": "2024-06-28",
+                    "priceId": 371,
+                    "roomTypeId": 26,
+                    "isOpenPrice": true,
+                    "roomPrice": 92,
+                    "totalPrice": 105,
+                    "adultTotal": 3,
+                    "childrenTotal": 1,
+                    "discountPercent": 0,
+                    "discountValue": 0,
+                    "priceOriginal": 105,
+                    "promotionAmount": 0
+                }
+            ],
+            "totalPriceOriginal": 105,
+            "totalPromotionAmount": 0,
+            "promotions": [],
+            "adult": 3,
+            "children": 1,
+            "nights": 1,
+            "maxRoom": 9
+        },
+        "roomProperty": [
+            {
+                "id": 5,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 13,
+                "propName": "Non-smoking"
+            },
+            {
+                "id": 54,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 17,
+                "propName": "Air conditioning"
+            },
+            {
+                "id": 55,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 19,
+                "propName": "Flat-screen TV"
+            },
+            {
+                "id": 56,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 15,
+                "propName": "Balcony"
+            },
+            {
+                "id": 57,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 16,
+                "propName": "Private Bathroom"
+            },
+            {
+                "id": 58,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 21,
+                "propName": "Spa bath"
+            },
+            {
+                "id": 59,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 18,
+                "propName": "City view"
+            }
+        ],
+        "totalPrice": 105,
+        "totalPriceOriginal": 105,
+        "totalPromotionAmount": 0
+    },
+    {
+        "checkIn": "2024-06-28",
+        "checkOut": "2024-06-29",
+        "roomTypeId": 26,
+        "roomTypeName": "Studio Queen",
+        "maxRoom": 10,
+        "price": {
+            "id": 380,
+            "name": "RYAN-PRICE-TEST-1",
+            "priceTotal": 192,
+            "qty": 1,
+            "description": "do not touch",
+            "dailyPrices": [
+                {
+                    "date": "2024-06-28",
+                    "priceId": 380,
+                    "roomTypeId": 26,
+                    "isOpenPrice": true,
+                    "roomPrice": 240,
+                    "totalPrice": 192,
+                    "adultTotal": 3,
+                    "childrenTotal": 1,
+                    "discountPercent": 0,
+                    "discountValue": 0,
+                    "priceOriginal": 240,
+                    "promotionAmount": -48
+                }
+            ],
+            "totalPriceOriginal": 240,
+            "totalPromotionAmount": -48,
+            "promotions": [
+                {
+                    "id": 2,
+                    "code": "DISCOUNT FOR TOTAL",
+                    "name": "PROMOTION123",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "ALWAYS",
+                    "bookingDateFrom": null,
+                    "bookingDateTo": null,
+                    "applyTimeStayingDateType": "PERIOD",
+                    "stayingDateFrom": "2024-06-28 00:00:00",
+                    "stayingDateTo": "2024-06-28 23:59:59",
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-18 14:29:42",
+                    "updatedAt": "2024-06-28 14:11:54",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 2,
+                    "promotionTypeId": 2,
+                    "promotionType": {
+                        "id": 2,
+                        "code": "1002",
+                        "name": "Total booking value",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 2,
+                        "bookingEnginePromotionTypeId": 1,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 5,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-18 14:29:42",
+                        "updatedAt": "2024-06-28 14:11:54",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [
+                        {
+                            "id": 32,
+                            "refId": 2,
+                            "blackoutDateType": "BOOKING_DATE",
+                            "from": "2024-06-18 00:00:00",
+                            "to": "2024-06-18 23:59:59"
+                        }
+                    ],
+                    "blackoutDateStayingDate": [
+                        {
+                            "id": 33,
+                            "refId": 2,
+                            "blackoutDateType": "STAYING_DATE",
+                            "from": "2024-06-23 00:00:00",
+                            "to": "2024-06-23 23:59:59"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "code": "SUPER DEAL NIGHTS 1",
+                    "name": "SDSD",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "ALWAYS",
+                    "bookingDateFrom": null,
+                    "bookingDateTo": null,
+                    "applyTimeStayingDateType": "PERIOD",
+                    "stayingDateFrom": "2024-06-24 00:00:00",
+                    "stayingDateTo": "2024-06-30 23:59:59",
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-23 19:54:47",
+                    "updatedAt": "2024-06-28 01:23:30",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 3,
+                    "promotionTypeId": 1,
+                    "promotionType": {
+                        "id": 1,
+                        "code": "1001",
+                        "name": "Every night",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 3,
+                        "bookingEnginePromotionTypeId": 1,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 20,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-23 19:54:47",
+                        "updatedAt": "2024-06-28 01:23:30",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [],
+                    "blackoutDateStayingDate": []
+                },
+                {
+                    "id": 4,
+                    "code": "BOOK X FREE Y",
+                    "name": "BOOK X FREE Y",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "PERIOD",
+                    "bookingDateFrom": "2024-06-24 00:00:00",
+                    "bookingDateTo": "2024-06-30 23:59:59",
+                    "applyTimeStayingDateType": "ALWAYS",
+                    "stayingDateFrom": null,
+                    "stayingDateTo": null,
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-25 15:36:18",
+                    "updatedAt": "2024-06-26 14:52:37",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 4,
+                    "promotionTypeId": 3,
+                    "promotionType": {
+                        "id": 3,
+                        "code": "1003",
+                        "name": "Book quantity x, free quantity y",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 4,
+                        "bookingEnginePromotionTypeId": 3,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 0,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-25 15:36:18",
+                        "updatedAt": "2024-06-26 14:52:37",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [
+                        {
+                            "id": 39,
+                            "refId": 4,
+                            "blackoutDateType": "BOOKING_DATE",
+                            "from": "2024-06-26 00:00:00",
+                            "to": "2024-06-26 23:59:59"
+                        }
+                    ],
+                    "blackoutDateStayingDate": []
+                }
+            ],
+            "promotionAppliedId": 3,
+            "promotionAppliedCode": "SUPER DEAL NIGHTS 1",
+            "adult": 3,
+            "children": 1,
+            "nights": 1,
+            "maxRoom": 9
+        },
+        "roomProperty": [
+            {
+                "id": 5,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 13,
+                "propName": "Non-smoking"
+            },
+            {
+                "id": 54,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 17,
+                "propName": "Air conditioning"
+            },
+            {
+                "id": 55,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 19,
+                "propName": "Flat-screen TV"
+            },
+            {
+                "id": 56,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 15,
+                "propName": "Balcony"
+            },
+            {
+                "id": 57,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 16,
+                "propName": "Private Bathroom"
+            },
+            {
+                "id": 58,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 21,
+                "propName": "Spa bath"
+            },
+            {
+                "id": 59,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 18,
+                "propName": "City view"
+            }
+        ],
+        "totalPrice": 192,
+        "totalPriceOriginal": 240,
+        "totalPromotionAmount": -48
+    },
+    {
+        "checkIn": "2024-06-28",
+        "checkOut": "2024-06-29",
+        "roomTypeId": 26,
+        "roomTypeName": "Studio Queen",
+        "maxRoom": 10,
+        "price": {
+            "id": 381,
+            "name": "RYAN-PRICE-TEST-2",
+            "priceTotal": 90,
+            "qty": 1,
+            "description": "do not touch",
+            "dailyPrices": [
+                {
+                    "date": "2024-06-28",
+                    "priceId": 381,
+                    "roomTypeId": 26,
+                    "isOpenPrice": true,
+                    "roomPrice": 100,
+                    "totalPrice": 90,
+                    "adultTotal": 3,
+                    "childrenTotal": 1,
+                    "discountPercent": 0,
+                    "discountValue": 0,
+                    "priceOriginal": 100,
+                    "promotionAmount": -10
+                }
+            ],
+            "totalPriceOriginal": 100,
+            "totalPromotionAmount": -10,
+            "promotions": [
+                {
+                    "id": 2,
+                    "code": "DISCOUNT FOR TOTAL",
+                    "name": "PROMOTION123",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "ALWAYS",
+                    "bookingDateFrom": null,
+                    "bookingDateTo": null,
+                    "applyTimeStayingDateType": "PERIOD",
+                    "stayingDateFrom": "2024-06-28 00:00:00",
+                    "stayingDateTo": "2024-06-28 23:59:59",
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-18 14:29:42",
+                    "updatedAt": "2024-06-28 14:11:54",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 2,
+                    "promotionTypeId": 2,
+                    "promotionType": {
+                        "id": 2,
+                        "code": "1002",
+                        "name": "Total booking value",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 2,
+                        "bookingEnginePromotionTypeId": 1,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 5,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-18 14:29:42",
+                        "updatedAt": "2024-06-28 14:11:54",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [
+                        {
+                            "id": 32,
+                            "refId": 2,
+                            "blackoutDateType": "BOOKING_DATE",
+                            "from": "2024-06-18 00:00:00",
+                            "to": "2024-06-18 23:59:59"
+                        }
+                    ],
+                    "blackoutDateStayingDate": [
+                        {
+                            "id": 33,
+                            "refId": 2,
+                            "blackoutDateType": "STAYING_DATE",
+                            "from": "2024-06-23 00:00:00",
+                            "to": "2024-06-23 23:59:59"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "code": "SUPER DEAL NIGHTS",
+                    "name": "RP001",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "ALWAYS",
+                    "bookingDateFrom": null,
+                    "bookingDateTo": null,
+                    "applyTimeStayingDateType": "PERIOD",
+                    "stayingDateFrom": "2024-06-22 00:00:00",
+                    "stayingDateTo": "2024-06-30 23:59:00",
+                    "canRefund": false,
+                    "refundDay": "1101111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-17 09:07:45",
+                    "updatedAt": "2024-06-28 01:23:22",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 1,
+                    "promotionTypeId": 1,
+                    "promotionType": {
+                        "id": 1,
+                        "code": "1001",
+                        "name": "Every night",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 1,
+                        "bookingEnginePromotionTypeId": 1,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 10,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-17 09:07:45",
+                        "updatedAt": "2024-06-28 01:23:22",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [],
+                    "blackoutDateStayingDate": []
+                },
+                {
+                    "id": 4,
+                    "code": "BOOK X FREE Y",
+                    "name": "BOOK X FREE Y",
+                    "hotelId": 5,
+                    "applyTimeBookingDateType": "PERIOD",
+                    "bookingDateFrom": "2024-06-24 00:00:00",
+                    "bookingDateTo": "2024-06-30 23:59:59",
+                    "applyTimeStayingDateType": "ALWAYS",
+                    "stayingDateFrom": null,
+                    "stayingDateTo": null,
+                    "canRefund": true,
+                    "refundDay": "1111111",
+                    "refundAt": "CHECKIN_DATE",
+                    "description": "",
+                    "createdAt": "2024-06-25 15:36:18",
+                    "updatedAt": "2024-06-26 14:52:37",
+                    "createdBy": 96,
+                    "updatedBy": 96,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "status": "ACTIVE",
+                    "promotionConditionId": 4,
+                    "promotionTypeId": 3,
+                    "promotionType": {
+                        "id": 3,
+                        "code": "1003",
+                        "name": "Book quantity x, free quantity y",
+                        "description": "",
+                        "status": "ACTIVE"
+                    },
+                    "promotionCondition": {
+                        "id": 4,
+                        "bookingEnginePromotionTypeId": 3,
+                        "applyAdjustmentType": "DISCOUNT",
+                        "rate": 0,
+                        "unit": "PERCENT",
+                        "minQuantityApply": 1,
+                        "freeQuantity": 1,
+                        "applyFor": "NIGHTS",
+                        "createdAt": "2024-06-25 15:36:18",
+                        "updatedAt": "2024-06-26 14:52:37",
+                        "createdBy": 96,
+                        "updatedBy": 96
+                    },
+                    "blackoutDateBookedDate": [
+                        {
+                            "id": 39,
+                            "refId": 4,
+                            "blackoutDateType": "BOOKING_DATE",
+                            "from": "2024-06-26 00:00:00",
+                            "to": "2024-06-26 23:59:59"
+                        }
+                    ],
+                    "blackoutDateStayingDate": []
+                }
+            ],
+            "promotionAppliedId": 1,
+            "promotionAppliedCode": "SUPER DEAL NIGHTS",
+            "adult": 3,
+            "children": 1,
+            "nights": 1,
+            "maxRoom": 9
+        },
+        "roomProperty": [
+            {
+                "id": 5,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 13,
+                "propName": "Non-smoking"
+            },
+            {
+                "id": 54,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 17,
+                "propName": "Air conditioning"
+            },
+            {
+                "id": 55,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 19,
+                "propName": "Flat-screen TV"
+            },
+            {
+                "id": 56,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 15,
+                "propName": "Balcony"
+            },
+            {
+                "id": 57,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 16,
+                "propName": "Private Bathroom"
+            },
+            {
+                "id": 58,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 21,
+                "propName": "Spa bath"
+            },
+            {
+                "id": 59,
+                "type": "ROOM_TYPE",
+                "refId": 26,
+                "propId": 18,
+                "propName": "City view"
+            }
+        ],
+        "totalPrice": 90,
+        "totalPriceOriginal": 100,
+        "totalPromotionAmount": -10
+    }
+]
