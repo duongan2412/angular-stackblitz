@@ -12,6 +12,7 @@ import { Helper } from '../utils/helps';
   templateUrl: './test1.component.html',
   styleUrls: ['./test1.component.css'],
 })
+
 export class Test1Component implements OnInit {
   constructor(
     // private dataService: DataService
@@ -25,19 +26,128 @@ export class Test1Component implements OnInit {
     { id: 3, fromValue: 61, toValue: 100, monday: 0, tuesday: 0, wednesday: 0, thursday: 0, friday: 0, saturday: 0, sunday: 0 }
   ]
   bookingCart: any;
+  ktvTrans:any = {
+    "id": 245,
+    "hotelId": 3,
+    "outletId": 13,
+    "printNum": null,
+    "checkNum": null,
+    "billStatus": null,
+    "open": "2024-10-15 17:50:36",
+    "close": null,
+    "status": 1,
+    "currencyId": 4,
+    "guestCnt": 1,
+    "hasServiceCharge": true,
+    "serviceChargeValue": "0.0000",
+    "priceSum": "0.0000",
+    "discountValue": "0.0000",
+    "vatValue": "0.0000",
+    "abtValue": "0.0000",
+    "paySum": "0.0000",
+    "descriptions": null,
+    "tableId": 20,
+    "tableName": "VIP 4",
+    "slot": 4,
+    "hallId": 1,
+    "hallName": "KTV King 1",
+    "cashier": null,
+    "roomId": null,
+    "customerName": null,
+    "startMinutes": 60,
+    "hourlyRate": 20,
+    "checkinAt": "2024-10-15 00:00:00",
+    "checkoutAt": "2024-10-15 01:20:00",
+    "checkinBy": 304,
+    "checkoutBy": null,
+    "serviceCharge": 6.00,
+    "vatRate": 12.00,
+    "priceSumRound": null,
+    "paySumRound": null
+}
+
 
   ngOnInit() {
-    this.roomTypeData = source.filteredMinimumAvailabilities;
-    this.roomTypeFilter = source.filter;
-    this.bookingCart = cart;
-    // this.checkPromotionApply(this.bookingCart);
-    // this.applyPromotionsToPrices(this.roomTypeData);
-    // const bo: BookingEnginePromotionBlackoutDate[] = [{blackoutDateType: BlackoutDateType.BOOKING_DATE, from: "2024-06-26 00:00:00", id: 39, refId: 4, to:"2024-06-26 23:59:59"}]
-    // console.log('inrange', this.isDateInRange('2024-06-26 15:56:45', '2024-06-26 00:00:00', '2024-06-26 23:59:59'))
-    // console.log('blackout', this.isDateInBlackout('2024-06-26 15:56:45', bo))
-    this.calculateBestPromotion(this.bookingCart);
-    const promotion = [{promotionAmount: 50}, {promotionAmount: 20}, {promotionAmount: 0}]
-    console.log({pro: this.getBestPromotion(promotion)})
+    console.log({calAmountByHours: this.calAmountByHours()})
+  }
+
+  calAmountByHours(){
+    let startMinutes = this.ktvTrans.startMinutes;
+    let checkinAt = this.ktvTrans.checkinAt;
+    let checkoutAt = this.ktvTrans.checkoutAt;
+    let price = this.ktvTrans.hourlyRate;
+
+    startMinutes = startMinutes && startMinutes > 0 ? startMinutes : 1;
+    const durationInMinutes = Math.ceil((moment(checkoutAt).diff(moment(checkinAt), "seconds") + 1) / 60);
+    const chargePeriods = durationInMinutes > startMinutes ? Math.floor((durationInMinutes > 0 ? durationInMinutes : 1) / startMinutes) + 1 : Math.ceil((durationInMinutes > 0 ? durationInMinutes : 1) / startMinutes);
+    const quantity = (chargePeriods * startMinutes) / 60;
+    console.log({quantity})
+    return this.roundN(price * quantity, 5);
+  }
+
+
+  roundN(num: number, decimals: number) {
+    if (num === null || num === undefined || isNaN(num)) {
+      return 0;
+    }
+    if (this.countDecimals(num) <= decimals) {
+      return num;
+    }
+    const sign = Math.sign(num);
+    const absNumber = Math.abs(num);
+    const pow = Math.pow(10, decimals);
+    const thirdDecimal = Math.floor((absNumber * pow) % 10);
+    let roundedNumber;
+    const checkValue = decimals < 5 ? 5 : (decimals + 1);
+    if (thirdDecimal >= checkValue) {
+      roundedNumber = Math.ceil(absNumber * pow) / pow;
+    } else {
+      roundedNumber = Math.floor(absNumber * pow) / pow;
+    }
+    return roundedNumber * sign;
+  }
+
+  round(num: number) {
+    if (num === null || num === undefined || isNaN(num)) {
+      return 0;
+    }
+    if (this.countDecimals(num) <= 4) {
+      return num;
+    }
+    const sign = Math.sign(num);
+    const absNumber = Math.abs(num);
+    const thirdDecimal = Math.floor((absNumber * 10000) % 10);
+    let roundedNumber;
+    if (thirdDecimal >= 5) {
+      roundedNumber = Math.ceil(absNumber * 10000) / 10000;
+    } else {
+      roundedNumber = Math.floor(absNumber * 10000) / 10000;
+    }
+    return roundedNumber * sign;
+  }
+
+  countDecimals(number: number) {
+    if (Math.floor(number) === number) return 0;
+    return number.toString().split(".")[1].length || 0;
+  }
+
+  round2d(num: number) {
+    if (num === null || num === undefined || isNaN(num)) {
+      return 0;
+    }
+    if (this.countDecimals(num) <= 2) {
+      return num;
+    }
+    const sign = Math.sign(num);
+    const absNumber = Math.abs(num);
+    const thirdDecimal = Math.floor((absNumber * 1000) % 10);
+    let roundedNumber;
+    if (thirdDecimal >= 5) {
+      roundedNumber = Math.ceil(absNumber * 100) / 100;
+    } else {
+      roundedNumber = Math.floor(absNumber * 100) / 100;
+    }
+    return Math.round((roundedNumber * sign) * 100) / 100;
   }
 
   isDateInBlackout(date: string, blackouts: BookingEnginePromotionBlackoutDate[]): boolean {
