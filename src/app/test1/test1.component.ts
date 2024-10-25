@@ -54,10 +54,10 @@ export class Test1Component implements OnInit {
     "cashier": null,
     "roomId": null,
     "customerName": null,
-    "startMinutes": 60,
-    "hourlyRate": 20,
-    "checkinAt": "2024-10-15 00:00:00",
-    "checkoutAt": "2024-10-15 01:20:00",
+    "startMinutes": 10,
+    "hourlyRate": 5,
+    "checkinAt": "2024-10-15 13:16:58",
+    "checkoutAt": "2024-10-15 13:16:59",
     "checkinBy": 304,
     "checkoutBy": null,
     "serviceCharge": 6.00,
@@ -80,50 +80,15 @@ export class Test1Component implements OnInit {
     startMinutes = startMinutes && startMinutes > 0 ? startMinutes : 1;
     const durationInMinutes = Math.ceil((moment(checkoutAt).diff(moment(checkinAt), "seconds") + 1) / 60);
     const chargePeriods = durationInMinutes > startMinutes ? Math.floor((durationInMinutes > 0 ? durationInMinutes : 1) / startMinutes) + 1 : Math.ceil((durationInMinutes > 0 ? durationInMinutes : 1) / startMinutes);
-    const quantity = (chargePeriods * startMinutes) / 60;
-    console.log({quantity})
-    return this.roundN(price * quantity, 5);
-  }
-
-
-  roundN(num: number, decimals: number) {
-    if (num === null || num === undefined || isNaN(num)) {
-      return 0;
-    }
-    if (this.countDecimals(num) <= decimals) {
-      return num;
-    }
-    const sign = Math.sign(num);
-    const absNumber = Math.abs(num);
-    const pow = Math.pow(10, decimals);
-    const thirdDecimal = Math.floor((absNumber * pow) % 10);
-    let roundedNumber;
-    const checkValue = decimals < 5 ? 5 : (decimals + 1);
-    if (thirdDecimal >= checkValue) {
-      roundedNumber = Math.ceil(absNumber * pow) / pow;
-    } else {
-      roundedNumber = Math.floor(absNumber * pow) / pow;
-    }
-    return roundedNumber * sign;
-  }
-
-  round(num: number) {
-    if (num === null || num === undefined || isNaN(num)) {
-      return 0;
-    }
-    if (this.countDecimals(num) <= 4) {
-      return num;
-    }
-    const sign = Math.sign(num);
-    const absNumber = Math.abs(num);
-    const thirdDecimal = Math.floor((absNumber * 10000) % 10);
-    let roundedNumber;
-    if (thirdDecimal >= 5) {
-      roundedNumber = Math.ceil(absNumber * 10000) / 10000;
-    } else {
-      roundedNumber = Math.floor(absNumber * 10000) / 10000;
-    }
-    return roundedNumber * sign;
+    const floor = Math.floor((durationInMinutes > 0 ? durationInMinutes : 1) / startMinutes) + 1;
+    const ceil = Math.ceil((durationInMinutes > 0 ? durationInMinutes : 1) / startMinutes);
+    const quantity = this.round2d((chargePeriods * startMinutes) / 60);
+    const quantity2 = this.roundN(((chargePeriods * startMinutes) / 60), 2);
+    // console.log({quantityFloor: this.round2d((floor * startMinutes) / 60)});
+    // console.log({quantityCeil: this.round2d((ceil * startMinutes) / 60)});
+    // console.log({quantity, total: price * quantity, totalFloor: price * floor, totalCeil: price * ceil})
+    console.log({quantity, quantity2})
+    return this.round2d(price * quantity);
   }
 
   countDecimals(number: number) {
@@ -141,6 +106,7 @@ export class Test1Component implements OnInit {
     const sign = Math.sign(num);
     const absNumber = Math.abs(num);
     const thirdDecimal = Math.floor((absNumber * 1000) % 10);
+    console.log({thirdDecimal2d:thirdDecimal})
     let roundedNumber;
     if (thirdDecimal >= 5) {
       roundedNumber = Math.ceil(absNumber * 100) / 100;
@@ -148,6 +114,29 @@ export class Test1Component implements OnInit {
       roundedNumber = Math.floor(absNumber * 100) / 100;
     }
     return Math.round((roundedNumber * sign) * 100) / 100;
+  }
+
+  roundN(num: number, decimals: number) {
+    if (num === null || num === undefined || isNaN(num)) {
+      return 0;
+    }
+    if (this.countDecimals(num) <= decimals) {
+      return num;
+    }
+    const sign = Math.sign(num);
+    const absNumber = Math.abs(num);
+    const pow = Math.pow(10, decimals);
+    console.log({pow, absNumber})
+    const thirdDecimal = Math.floor((absNumber * pow) % 10);
+    console.log({thirdDecimal})
+    let roundedNumber;
+    const checkValue = decimals < 5 ? 5 : (decimals + 1);
+    if (thirdDecimal >= checkValue) {
+      roundedNumber = Math.ceil(absNumber * pow) / pow;
+    } else {
+      roundedNumber = Math.floor(absNumber * pow) / pow;
+    }
+    return roundedNumber * sign;
   }
 
   isDateInBlackout(date: string, blackouts: BookingEnginePromotionBlackoutDate[]): boolean {
